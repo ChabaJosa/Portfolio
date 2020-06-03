@@ -16,7 +16,8 @@ const Home = () => {
     collapseText: "show more", // text to show when collapsed
     expandText: "show less", // text to show when expanded
     minHeight: 120, // component height when closed
-    maxHeight: 250, // expanded to
+	// maxHeight: 250, // expanded to
+    maxHeight: 400, 
     textStyle: {
       float: "none",
       color: "#787878",
@@ -30,7 +31,7 @@ const Home = () => {
       color: "#787878 !important",
       display: "inline-block",
       fontWeight: "400",
-      height: "3.15em",
+      height: "3.15em", 
       height: "calc(2.75em + 6px)",
       lineHeight: "2.75em",
       minWidth: "7rem",
@@ -78,7 +79,6 @@ const Home = () => {
             </header>
             <ReactTextCollapse
               options={TEXT_COLLAPSE_OPTIONS}
-              style={{ zIndex: 1 }}
             >
               <p>
                 Ironhack graduate from January 2020, full-stack web development
@@ -97,6 +97,7 @@ const Home = () => {
                 marketing at Florida International University and start my
                 Social Media Marketing career at Radar.
                 <br />
+				<br />
                 Once I realized my true passion was coding, I ceased attending
                 undergraduate classes with only a semester shy of graduating to
                 study computer programming on my own. While I put in a couple of
@@ -105,7 +106,9 @@ const Home = () => {
                 found the Ironhack coding school Full-Stack Web Development
                 Bootcamp. With 500+ hours of hands on programming, I knew
                 Ironhack would provide me the tools I was looking for.
-                <br />I completed the Bootcamp in 9 weeks, while still working
+                <br />
+				<br />
+				I completed the Bootcamp in 9 weeks, while still working
                 full-time at Radar and delivering exponential results of organic
                 growth. My team won best final project for our App that used
                 machine learning and web scraping to help plan out social media
