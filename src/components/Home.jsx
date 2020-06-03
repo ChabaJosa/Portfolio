@@ -1,5 +1,5 @@
 import React from "react";
-import mainPic from "./strata/images/avatar.jpg";
+import mainPic from "./strata/images/ProfilePic.png";
 
 import projectPic1 from "./strata/images/thumbs/01.jpg";
 import projectPic2 from "./strata/images/thumbs/02.jpg";
@@ -8,25 +8,64 @@ import projectPic4 from "./strata/images/thumbs/04.jpg";
 import projectPic5 from "./strata/images/thumbs/05.jpg";
 import projectPic6 from "./strata/images/thumbs/06.jpg";
 
-
+import ReactTextCollapse from "react-text-collapse";
 
 const Home = () => {
+  const TEXT_COLLAPSE_OPTIONS = {
+    collapse: false, // default state when component rendered
+    collapseText: "show more", // text to show when collapsed
+    expandText: "show less", // text to show when expanded
+    minHeight: 120, // component height when closed
+    maxHeight: 250, // expanded to
+    textStyle: {
+      float: "none",
+      color: "#787878",
+      fontSize: "16px",
+      mozAppearance: "none",
+      webkitAppearance: "none",
+      msAppearance: "none",
+      appearance: "none",
+      borderRadius: "0.35em",
+      border: "solid 3px #efefef",
+      color: "#787878 !important",
+      display: "inline-block",
+      fontWeight: "400",
+      height: "3.15em",
+      height: "calc(2.75em + 6px)",
+      lineHeight: "2.75em",
+      minWidth: "7rem",
+      textAlign: "center",
+      textDecoration: "none",
+      whiteSpace: "nowrap",
+      margin: "1rem 0",      
+    },
+  };
+
   return (
     <>
       <div>
         {/* Header */}
-        <header id="header">
+        <header
+          id="header"
+          style={{
+            backgroundImage: `url("../strata/assets/css/images/overlay.png")`,
+          }}
+        >
+          {/* Work on this background image above later */}
+
           <div className="inner">
             <a href="#" className="image avatar">
               <img src={mainPic} alt="" />
             </a>
             <div>
-              <h1><strong>I'm Chaba</strong></h1>
+              <h1>
+                <strong>I'm Chaba</strong>
+              </h1>
+              <h1>Film Buff</h1>
+              <h1>Bookworm</h1>
               <h1>MERN-Stack nerd</h1>
               <h1>Tech trend enthusiast</h1>
               <h1>Social Media Marketer</h1>
-              <h1>Bookworm</h1>
-              <h1>Film Buff</h1>
             </div>
           </div>
         </header>
@@ -37,22 +76,51 @@ const Home = () => {
             <header className="major">
               <h2>About Me</h2>
             </header>
-            <p>
-              Accumsan orci faucibus id eu lorem semper. Eu ac iaculis ac nunc
-              nisi lorem vulputate lorem neque cubilia ac in adipiscing in curae
-              lobortis tortor primis integer massa adipiscing id nisi accumsan
-              pellentesque commodo blandit enim arcu non at amet id arcu magna.
-              Accumsan orci faucibus id eu lorem semper nunc nisi lorem
-              vulputate lorem neque cubilia.
-            </p>
-            <ul className="actions">
+            <ReactTextCollapse
+              options={TEXT_COLLAPSE_OPTIONS}
+              style={{ zIndex: 1 }}
+            >
+              <p>
+                Ironhack graduate from January 2020, full-stack web development
+                cohort with a +3 year background in content strategy and social
+                media growth hacks. My current aspirations are to grow within
+                the tech industry while continuing to learn about programming
+                and data analysis. Specialties: Social Media, Organic Audience
+                Growth, JavaScript (ES6), HTML5, CSS3, ReactJS, NodeJS,
+                ReactNative.
+              </p>
+              <p>
+                My education started in my home country of Venezuela and
+                continued in the College of Southernn Maryland where I completed
+                college in 3 semesters and a summer, while working remotely for
+                the first company I worked for, MT Group. I went on to study
+                marketing at Florida International University and start my
+                Social Media Marketing career at Radar.
+                <br />
+                Once I realized my true passion was coding, I ceased attending
+                undergraduate classes with only a semester shy of graduating to
+                study computer programming on my own. While I put in a couple of
+                hours a day, I knew I was not doing enough to reach the
+                professional level of expertise I was looking for. That's when I
+                found the Ironhack coding school Full-Stack Web Development
+                Bootcamp. With 500+ hours of hands on programming, I knew
+                Ironhack would provide me the tools I was looking for.
+                <br />I completed the Bootcamp in 9 weeks, while still working
+                full-time at Radar and delivering exponential results of organic
+                growth. My team won best final project for our App that used
+                machine learning and web scraping to help plan out social media
+                content strategies.
+              </p>
+            </ReactTextCollapse>
+
+            {/* <ul className="actions">
               <li>
                 <a href="#" className="button">
-                  {/* Should go to linkedin.com/chaba-josa */}
+                  Should go to linkedin.com/chaba-josa
                   Learn More
                 </a>
               </li>
-            </ul>
+            </ul> */}
           </section>
           {/* Two */}
           <section id="two">
