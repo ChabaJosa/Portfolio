@@ -1,7 +1,7 @@
 import React  from 'react';
-import Home   from "./components/Home"
+import Home   from "./screens/Home"
 // import './App.css';
-import "./components/strata/assets/css/main.css"
+import "./screens/template-elements/assets/css/main.css"
 
 function App() {
   return (

@@ -2,3 +2,4 @@ Add YouTube video for each project and embedd it within a card.
 Proper background and contact from functionality.
 Replace <a> tags with <Link> tags.
 Clean up useless code, integrate resuable components and grammar check.
+Add Context API

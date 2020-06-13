@@ -1,15 +1,15 @@
 import React from "react";
-import mainPic from "./strata/images/ProfilePic.png";
+import mainPic from "./template-elements/images/ProfilePic.png";
 
-import projectPic1 from "./strata/images/thumbs/01.jpg";
-import projectPic2 from "./strata/images/thumbs/02.jpg";
-import projectPic3 from "./strata/images/thumbs/03.jpg";
-import projectPic4 from "./strata/images/thumbs/04.jpg";
-import projectPic5 from "./strata/images/thumbs/05.jpg";
-import projectPic6 from "./strata/images/thumbs/06.jpg";
+import projectPic1 from "./template-elements/images/thumbs/01.jpg";
+import projectPic2 from "./template-elements/images/thumbs/02.jpg";
+import projectPic3 from "./template-elements/images/thumbs/03.jpg";
+import projectPic4 from "./template-elements/images/thumbs/04.jpg";
+import projectPic5 from "./template-elements/images/thumbs/05.jpg";
+import projectPic6 from "./template-elements/images/thumbs/06.jpg";
 
 import ReactTextCollapse from "react-text-collapse";
-import { Switch, Route } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 const Home = (props) => {
   const TEXT_COLLAPSE_OPTIONS = {
@@ -17,8 +17,8 @@ const Home = (props) => {
     collapseText: "show more", // text to show when collapsed
     expandText: "show less", // text to show when expanded
     minHeight: 120, // component height when closed
-	// maxHeight: 250, // expanded to
-    maxHeight: 400, 
+    // maxHeight: 250, // expanded to
+    maxHeight: 400,
     textStyle: {
       float: "none",
       color: "#787878",
@@ -32,14 +32,14 @@ const Home = (props) => {
       color: "#787878 !important",
       display: "inline-block",
       fontWeight: "400",
-      height: "3.15em", 
+      height: "3.15em",
       height: "calc(2.75em + 6px)",
       lineHeight: "2.75em",
       minWidth: "7rem",
       textAlign: "center",
       textDecoration: "none",
       whiteSpace: "nowrap",
-      margin: "1rem 0",      
+      margin: "1rem 0",
     },
   };
 
@@ -78,9 +78,7 @@ const Home = (props) => {
             <header className="major">
               <h2>About Me</h2>
             </header>
-            <ReactTextCollapse
-              options={TEXT_COLLAPSE_OPTIONS}
-            >
+            <ReactTextCollapse options={TEXT_COLLAPSE_OPTIONS}>
               <p>
                 Ironhack graduate from January 2020, full-stack web development
                 cohort with a +3 year background in content strategy and social
@@ -98,7 +96,7 @@ const Home = (props) => {
                 marketing at Florida International University and start my
                 Social Media Marketing career at Radar.
                 <br />
-				<br />
+                <br />
                 Once I realized my true passion was coding, I ceased attending
                 undergraduate classes with only a semester shy of graduating to
                 study computer programming on my own. While I put in a couple of
@@ -108,67 +106,79 @@ const Home = (props) => {
                 Bootcamp. With 500+ hours of hands on programming, I knew
                 Ironhack would provide me the tools I was looking for.
                 <br />
-				<br />
-				I completed the Bootcamp in 9 weeks, while still working
+                <br />I completed the Bootcamp in 9 weeks, while still working
                 full-time at Radar and delivering exponential results of organic
                 growth. My team won best final project for our App that used
                 machine learning and web scraping to help plan out social media
                 content strategies.
               </p>
             </ReactTextCollapse>
-
           </section>
           {/* Two */}
           <section id="two">
             <h2>Recent Work</h2>
             <div className="row">
               <article className="col-6 col-12-xsmall work-item">
-                <a href="images/fulls/01.jpg" className="image fit thumb">
+                {/* Insert Link here */}
+                <Link to="/" className="image fit thumb" >
                   <img src={projectPic1} alt="" />
-                </a>
-                <h3>Magna sed consequat tempus</h3>
-                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                </Link>
+                <h3>EngagementML</h3>
+                <p>Instagram Insights + Machine Learning recommenrdations.</p>
               </article>
               <article className="col-6 col-12-xsmall work-item">
-                <a href="images/fulls/02.jpg" className="image fit thumb">
+                {/* Insert Link here */}
+                <Link to="/" className="image fit thumb" >
                   <img src={projectPic2} alt="" />
-                </a>
-                <h3>Ultricies lacinia interdum</h3>
-                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                </Link>
+
+                <h3>Super Marvel Directory</h3>
+                <p>Power-Stats, fun facts, videos and comics your favorite heroes! </p>
               </article>
               <article className="col-6 col-12-xsmall work-item">
-                <a href="images/fulls/03.jpg" className="image fit thumb">
+                {/* Insert Link here */}
+                <Link to="/" className="image fit thumb" >
                   <img src={projectPic3} alt="" />
-                </a>
-                <h3>Tortor metus commodo</h3>
-                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                </Link>
+
+                <h3>React-Native Food App</h3>
+                <p>First React-Native App (of many to come).</p>
               </article>
               <article className="col-6 col-12-xsmall work-item">
-                <a href="images/fulls/04.jpg" className="image fit thumb">
+                {/* Insert Link here */}
+                <Link to="/" className="image fit thumb" >
                   <img src={projectPic4} alt="" />
-                </a>
-                <h3>Quam neque phasellus</h3>
-                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                </Link>
+
+                <h3>Trakster</h3>
+                <p>Prototype expense tracker (working progress).</p>
               </article>
               <article className="col-6 col-12-xsmall work-item">
-                <a href="images/fulls/05.jpg" className="image fit thumb">
+                {/* Insert Link here */}
+                <Link to="/" className="image fit thumb" >
                   <img src={projectPic5} alt="" />
-                </a>
-                <h3>Nunc enim commodo aliquet</h3>
-                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                </Link>
+
+                <h3>Twitter Bot</h3>
+                <p>So you can doubt any liked and retweeted content on your feed!</p>
               </article>
               <article className="col-6 col-12-xsmall work-item">
-                <a href="images/fulls/06.jpg" className="image fit thumb">
+                {/* Insert Link here */}
+                <Link to="/" className="image fit thumb" >
                   <img src={projectPic6} alt="" />
-                </a>
-                <h3>Risus ornare lacinia</h3>
-                <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
+                </Link>
+
+                <h3>Whak-A-Villain</h3>
+                <p>Marvel themed D.O.M. Manipulation whack-a-mole.</p>
               </article>
             </div>
+            {/* Download resume btn */}
             <ul className="actions">
-              	<li>
-					<a href="#" class="button primary icon fa-download">Download Resume</a>
-				</li>
+              <li>
+                <a target="_blank" href="https://github.com/ChabaJosa" class="button primary icon fa-download" rel="noopener noreferrer" >
+                  All Repositories
+                </a>
+              </li>
             </ul>
           </section>
           {/* Three */}
@@ -237,36 +247,48 @@ const Home = (props) => {
               </div>
             </div>
           </section>
-
-
         </div>
         {/* Footer */}
         <footer id="footer">
           <div className="inner">
             <ul className="icons">
               <li>
-                <a href="twitter.com/cg_josa" target="_blank" rel="nofollow" className="icon brands fa-twitter">
-                	{/* <button onClick={() => { props.history.push("google.com"); window.location.reload() }} className="btn btn-light" type="submit" style={{ background: "transparent", color: "white", border:0 }} >+</button> */}
-				  <span className="label">Twitter</span>
+                <a
+                  href="https://twitter.com/cg_josa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="icon brands fa-twitter"
+                >
+                  {/* <button onClick={() => { props.history.push("google.com"); window.location.reload() }} className="btn btn-light" type="submit" style={{ background: "transparent", color: "white", border:0 }} >+</button> */}
+                  <span className="label">Twitter</span>
                 </a>
               </li>
               <li>
-                <a href="github.com/ChabaJosa" target="_blank" rel="nofollow" className="icon brands fa-github">
-                	{/* <button onClick={() => { props.history.push("google.com"); window.location.reload() }} className="btn btn-light" type="submit" style={{ background: "transparent", color: "white", border:0 }} >+</button> */}
-				  <span className="label">Github</span>
+                <a
+                  href="https://github.com/ChabaJosa"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="icon brands fa-github"
+                >
+                  {/* <button onClick={() => { props.history.push("google.com"); window.location.reload() }} className="btn btn-light" type="submit" style={{ background: "transparent", color: "white", border:0 }} >+</button> */}
+                  <span className="label">Github</span>
                 </a>
               </li>
 
-			  {/* <Route path='/privacy-policy' component={() => { 
+              {/* <Route path='/privacy-policy' component={() => { 
 					window.location.href = 'https://google.com/'; 
 					return null;
 				}}/> */}
 
-
               <li>
-                <a href="#" target="_blank" rel="nofollow"  className="icon solid fa-envelope">
-                	{/* <button onClick={() => { props.history.push("google.com"); window.location.reload() }} className="btn btn-light" type="submit" style={{ background: "transparent", color: "white", border:0 }} >+</button> */}
-				  <span className="label">Email</span>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="icon solid fa-envelope"
+                >
+                  {/* <button onClick={() => { props.history.push("google.com"); window.location.reload() }} className="btn btn-light" type="submit" style={{ background: "transparent", color: "white", border:0 }} >+</button> */}
+                  <span className="label">Email</span>
                 </a>
               </li>
             </ul>
