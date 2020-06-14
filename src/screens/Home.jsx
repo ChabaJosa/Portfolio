@@ -1,17 +1,17 @@
-import React from "react";
+import React, { Children } from "react";
 import mainPic from "./template-elements/images/ProfilePic.png";
-
-import projectPic1 from "./template-elements/images/thumbs/01.jpg";
-import projectPic2 from "./template-elements/images/thumbs/02.jpg";
-import projectPic3 from "./template-elements/images/thumbs/03.jpg";
-import projectPic4 from "./template-elements/images/thumbs/04.jpg";
-import projectPic5 from "./template-elements/images/thumbs/05.jpg";
-import projectPic6 from "./template-elements/images/thumbs/06.jpg";
+import projectPic1 from "./template-elements/images/thumbs/01.png";
+import projectPic2 from "./template-elements/images/thumbs/02.png";
+import projectPic3 from "./template-elements/images/thumbs/03.png";
+import projectPic4 from "./template-elements/images/thumbs/04.png";
+import projectPic5 from "./template-elements/images/thumbs/05.png";
+import projectPic6 from "./template-elements/images/thumbs/06.png";
 
 import ReactTextCollapse from "react-text-collapse";
 import { Link } from "react-router-dom";
+import Modal from "./components/Modal";
 
-const Home = (props) => {
+export default function Home(props) {
   const TEXT_COLLAPSE_OPTIONS = {
     collapse: false, // default state when component rendered
     collapseText: "show more", // text to show when collapsed
@@ -21,7 +21,6 @@ const Home = (props) => {
     maxHeight: 400,
     textStyle: {
       float: "none",
-      color: "#787878",
       fontSize: "16px",
       mozAppearance: "none",
       webkitAppearance: "none",
@@ -33,7 +32,7 @@ const Home = (props) => {
       display: "inline-block",
       fontWeight: "400",
       height: "3.15em",
-      height: "calc(2.75em + 6px)",
+      // height: "calc(2.75em + 6px)",
       lineHeight: "2.75em",
       minWidth: "7rem",
       textAlign: "center",
@@ -42,6 +41,13 @@ const Home = (props) => {
       margin: "1rem 0",
     },
   };
+
+  const [modalShow1, setModalShow1] = React.useState(false);
+  const [modalShow2, setModalShow2] = React.useState(false);
+  const [modalShow3, setModalShow3] = React.useState(false);
+  const [modalShow4, setModalShow4] = React.useState(false);
+  const [modalShow5, setModalShow5] = React.useState(false);
+  const [modalShow6, setModalShow6] = React.useState(false);
 
   return (
     <>
@@ -120,62 +126,200 @@ const Home = (props) => {
             <div className="row">
               <article className="col-6 col-12-xsmall work-item">
                 {/* Insert Link here */}
-                <Link to="/" className="image fit thumb" >
-                  <img src={projectPic1} alt="" />
+                <Link
+                  to="/"
+                  className="image fit thumb"
+                  onClick={() => setModalShow1(true)}
+                >
+                  <img
+                    src={projectPic1}
+                    alt=""
+                    style={{ height: "20rem", overflow: "hidden" }}
+                  />
+                  {modalShow1 === true ? (
+                    <div>
+                      <Modal
+                        show={modalShow1}
+                        onHide={
+                          (() => setModalShow1(false),
+                          console.log("Pressed onHide 1"))
+                        }
+                        title={"EngagementML"}
+                        funFact={"AI is my dream field."}
+                      />
+                    </div>
+                  ) : null}
                 </Link>
                 <h3>EngagementML</h3>
                 <p>Instagram Insights + Machine Learning recommenrdations.</p>
               </article>
               <article className="col-6 col-12-xsmall work-item">
-                {/* Insert Link here */}
-                <Link to="/" className="image fit thumb" >
-                  <img src={projectPic2} alt="" />
+                {/* Eml above*/}
+                <Link
+                  to="/"
+                  className="image fit thumb"
+                  onClick={() => setModalShow2(true)}
+                >
+                  <img
+                    src={projectPic2}
+                    alt=""
+                    style={{ height: "20rem", overflow: "hidden" }}
+                  />
+                  {modalShow2 === true ? (
+                    <div>
+                      <Modal
+                        show={modalShow2}
+                        onHide={
+                          (() => setModalShow2(false),
+                          console.log("Pressed onHide2"))
+                        }
+                        title={"EngagementML2"}
+                        funFact={"AI is my dream field2."}
+                      />
+                    </div>
+                  ) : null}
                 </Link>
 
                 <h3>Super Marvel Directory</h3>
-                <p>Power-Stats, fun facts, videos and comics your favorite heroes! </p>
+                <p>
+                  Power-Stats, fun facts, videos and comics your favorite
+                  heroes!{" "}
+                </p>
               </article>
+                {/* Super Directory App above */}
               <article className="col-6 col-12-xsmall work-item">
-                {/* Insert Link here */}
-                <Link to="/" className="image fit thumb" >
-                  <img src={projectPic3} alt="" />
+                <Link
+                  to="/"
+                  className="image fit thumb"
+                  onClick={() => setModalShow3(true)}
+                >
+                  <img
+                    src={projectPic3}
+                    alt=""
+                    style={{ height: "20rem", overflow: "hidden" }}
+                  />
+                  {modalShow3 === true ? (
+                    <div>
+                      <Modal
+                        show={modalShow3}
+                        onHide={
+                          (() => setModalShow3(false),
+                          console.log("Pressed onHide"))
+                        }
+                        title={"EngagementML3"}
+                        funFact={"AI is my dream field.3"}
+                      />
+                    </div>
+                  ) : null}
                 </Link>
 
                 <h3>React-Native Food App</h3>
                 <p>First React-Native App (of many to come).</p>
               </article>
+                {/* Food App above */}
               <article className="col-6 col-12-xsmall work-item">
                 {/* Insert Link here */}
-                <Link to="/" className="image fit thumb" >
-                  <img src={projectPic4} alt="" />
+                <Link
+                  to="/"
+                  className="image fit thumb"
+                  onClick={() => setModalShow4(true)}
+                >
+                  <img
+                    src={projectPic4}
+                    alt=""
+                    style={{ height: "20rem", overflow: "hidden" }}
+                  />
+                  {modalShow4 === true ? (
+                    <div>
+                      <Modal
+                        show={modalShow4}
+                        onHide={
+                          (() => setModalShow4(false),
+                          console.log("Pressed onHide4"))
+                        }
+                        title={"EngagementML4"}
+                        funFact={"AI is my dream field4."}
+                      />
+                    </div>
+                  ) : null}
                 </Link>
 
                 <h3>Trakster</h3>
                 <p>Prototype expense tracker (working progress).</p>
               </article>
+                {/* Trakster above */}
               <article className="col-6 col-12-xsmall work-item">
-                {/* Insert Link here */}
-                <Link to="/" className="image fit thumb" >
-                  <img src={projectPic5} alt="" />
+                <Link
+                  to="/"
+                  className="image fit thumb"
+                  onClick={() => setModalShow5(true)}
+                >
+                  <img
+                    src={projectPic5}
+                    alt=""
+                    style={{ height: "20rem", overflow: "hidden" }}
+                  />
+                  {modalShow5 === true ? (
+                    <div>
+                      <Modal
+                        show={modalShow5}
+                        onHide={
+                          (() => setModalShow5(false),
+                          console.log("Pressed onHide5"))
+                        }
+                        title={"EngagementML5"}
+                        funFact={"AI is my dream field5."}
+                      />
+                    </div>
+                  ) : null}
                 </Link>
 
                 <h3>Twitter Bot</h3>
-                <p>So you can doubt any liked and retweeted content on your feed!</p>
+                <p>
+                  So you can doubt any liked and retweeted content on your feed!
+                </p>
               </article>
-              <article className="col-6 col-12-xsmall work-item">
+                {/* Twitter Bot above */}
+                <article className="col-6 col-12-xsmall work-item">
                 {/* Insert Link here */}
-                <Link to="/" className="image fit thumb" >
-                  <img src={projectPic6} alt="" />
+                <Link
+                  to="/"
+                  className="image fit thumb"
+                  onClick={() => setModalShow6(true)}
+                >
+                  <img
+                    src={projectPic6}
+                    alt=""
+                    style={{ height: "20rem", overflow: "hidden" }}
+                  />
+                  {modalShow6 === true ? (
+                    <div>
+                      <Modal
+                        show={modalShow6}
+                        onHide={
+                          (() => setModalShow6(false),
+                          console.log("Pressed onHide6"))
+                        }
+                        title={"EngagementML6"}
+                        funFact={"AI is my dream field.6"}
+                      />
+                    </div>
+                  ) : null}
                 </Link>
-
                 <h3>Whak-A-Villain</h3>
                 <p>Marvel themed D.O.M. Manipulation whack-a-mole.</p>
               </article>
+                {/* Whak a Villain above */}
             </div>
             {/* Download resume btn */}
             <ul className="actions">
               <li>
-                <a target="_blank" href="https://github.com/ChabaJosa" class="button primary icon fa-download" rel="noopener noreferrer" >
+                <a
+                  target="_blank"
+                  href="https://github.com/ChabaJosa?tab=repositories"
+                  class="button primary icon fa-download"
+                  rel="noopener noreferrer"
+                >
                   All Repositories
                 </a>
               </li>
@@ -282,22 +426,18 @@ const Home = (props) => {
 
               <li>
                 <a
-                  href="#"
+                  href="https://linkedin.com/in/chaba-josa/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="icon solid fa-envelope"
                 >
-                  {/* <button onClick={() => { props.history.push("google.com"); window.location.reload() }} className="btn btn-light" type="submit" style={{ background: "transparent", color: "white", border:0 }} >+</button> */}
-                  <span className="label">Email</span>
+                  <span className="label">LinkedIn</span>
                 </a>
               </li>
             </ul>
           </div>
         </footer>
-        {/* Scripts */}
       </div>
     </>
   );
-};
-
-export default Home;
+}
