@@ -6,6 +6,7 @@ import projectPic3 from "./template-elements/images/thumbs/03.png";
 import projectPic4 from "./template-elements/images/thumbs/04.png";
 import projectPic5 from "./template-elements/images/thumbs/05.png";
 import projectPic6 from "./template-elements/images/thumbs/06.png";
+import Background from "./template-elements/images/codeBackground.jpg";
 
 import ReactTextCollapse from "react-text-collapse";
 import { Link } from "react-router-dom";
@@ -56,7 +57,14 @@ export default function Home(props) {
         <header
           id="header"
           style={{
-            backgroundImage: `url("../strata/assets/css/images/overlay.png")`,
+            backgroundImage: `
+              linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+                ), 
+              url(${Background})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "100rem",
           }}
         >
           {/* Work on this background image above later */}
@@ -128,6 +136,9 @@ export default function Home(props) {
                 {/* Insert Link here */}
                 <Link
                   to="/"
+                  style={{
+                    // display: "inline"
+                  }}
                   className="image fit thumb"
                   onClick={() => setModalShow1(true)}
                 >
@@ -151,13 +162,16 @@ export default function Home(props) {
                     </div>
                   ) : null}
                 </Link>
-                <h3>EngagementML</h3>
+                <h3 className="hover-underline-animation">EngagementML</h3>
                 <p>Instagram Insights + Machine Learning recommenrdations.</p>
               </article>
               <article className="col-6 col-12-xsmall work-item">
                 {/* Eml above*/}
                 <Link
                   to="/"
+                  style={{
+                    // display: "inline"
+                  }}
                   className="image fit thumb"
                   onClick={() => setModalShow2(true)}
                 >
@@ -181,16 +195,21 @@ export default function Home(props) {
                   ) : null}
                 </Link>
 
-                <h3>Super Marvel Directory</h3>
+                <h3 className="hover-underline-animation">
+                  Super Marvel Directory
+                </h3>
                 <p>
                   Power-Stats, fun facts, videos and comics your favorite
                   heroes!{" "}
                 </p>
               </article>
-                {/* Super Directory App above */}
+              {/* Super Directory App above */}
               <article className="col-6 col-12-xsmall work-item">
                 <Link
                   to="/"
+                  style={{
+                    // display: "inline"
+                  }}
                   className="image fit thumb"
                   onClick={() => setModalShow3(true)}
                 >
@@ -214,14 +233,19 @@ export default function Home(props) {
                   ) : null}
                 </Link>
 
-                <h3>React-Native Food App</h3>
+                <h3 className="hover-underline-animation">
+                  React-Native Food App
+                </h3>
                 <p>First React-Native App (of many to come).</p>
               </article>
-                {/* Food App above */}
+              {/* Food App above */}
               <article className="col-6 col-12-xsmall work-item">
                 {/* Insert Link here */}
                 <Link
                   to="/"
+                  style={{
+                    // display: "inline"
+                  }}
                   className="image fit thumb"
                   onClick={() => setModalShow4(true)}
                 >
@@ -245,13 +269,16 @@ export default function Home(props) {
                   ) : null}
                 </Link>
 
-                <h3>Trakster</h3>
+                <h3 className="hover-underline-animation">Trakster</h3>
                 <p>Prototype expense tracker (working progress).</p>
               </article>
-                {/* Trakster above */}
+              {/* Trakster above */}
               <article className="col-6 col-12-xsmall work-item">
                 <Link
                   to="/"
+                  style={{
+                    // display: "inline"
+                  }}
                   className="image fit thumb"
                   onClick={() => setModalShow5(true)}
                 >
@@ -275,16 +302,19 @@ export default function Home(props) {
                   ) : null}
                 </Link>
 
-                <h3>Twitter Bot</h3>
+                <h3 className="hover-underline-animation">Twitter Bot</h3>
                 <p>
                   So you can doubt any liked and retweeted content on your feed!
                 </p>
               </article>
-                {/* Twitter Bot above */}
-                <article className="col-6 col-12-xsmall work-item">
+              {/* Twitter Bot above */}
+              <article className="col-6 col-12-xsmall work-item">
                 {/* Insert Link here */}
                 <Link
                   to="/"
+                  style={{
+                    // display: "inline"
+                  }}
                   className="image fit thumb"
                   onClick={() => setModalShow6(true)}
                 >
@@ -307,10 +337,10 @@ export default function Home(props) {
                     </div>
                   ) : null}
                 </Link>
-                <h3>Whak-A-Villain</h3>
+                <h3 className="hover-underline-animation">Whak-A-Villain</h3>
                 <p>Marvel themed D.O.M. Manipulation whack-a-mole.</p>
               </article>
-                {/* Whak a Villain above */}
+              {/* Whak a Villain above */}
             </div>
             {/* Download resume btn */}
             <ul className="actions">
