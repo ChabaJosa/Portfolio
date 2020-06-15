@@ -163,7 +163,7 @@ export default function Home(props) {
                   ) : null}
                 </Link>
                 <h3 className="hover-underline-animation">EngagementML</h3>
-                <p>Instagram Insights + Machine Learning recommenrdations.</p>
+                <p>Instagram Insights + Machine Learning recommendations.</p>
               </article>
               <article className="col-6 col-12-xsmall work-item">
                 {/* Eml above*/}
@@ -188,8 +188,8 @@ export default function Home(props) {
                           (() => setModalShow2(false),
                           console.log("Pressed onHide2"))
                         }
-                        title={"EngagementML2"}
-                        funFact={"AI is my dream field2."}
+                        title={"Super Marvel Directory"}
+                        funFact={"My favorite superhero App of the two! Very much looking forward to a React Native version"}
                       />
                     </div>
                   ) : null}
@@ -226,8 +226,8 @@ export default function Home(props) {
                           (() => setModalShow3(false),
                           console.log("Pressed onHide"))
                         }
-                        title={"EngagementML3"}
-                        funFact={"AI is my dream field.3"}
+                        title={"React Native FoodApp"}
+                        funFact={"My first Mobile App!"}
                       />
                     </div>
                   ) : null}
@@ -262,8 +262,8 @@ export default function Home(props) {
                           (() => setModalShow4(false),
                           console.log("Pressed onHide4"))
                         }
-                        title={"EngagementML4"}
-                        funFact={"AI is my dream field4."}
+                        title={"Trakster"}
+                        funFact={"I'm currently working this one! It's going to be MERN stack project."}
                       />
                     </div>
                   ) : null}
@@ -295,8 +295,8 @@ export default function Home(props) {
                           (() => setModalShow5(false),
                           console.log("Pressed onHide5"))
                         }
-                        title={"EngagementML5"}
-                        funFact={"AI is my dream field5."}
+                        title={"Twitter Bot"}
+                        funFact={"Fun little Twitter bot that will eventually manage my Twitter all day on my old PC."}
                       />
                     </div>
                   ) : null}
@@ -331,8 +331,8 @@ export default function Home(props) {
                           (() => setModalShow6(false),
                           console.log("Pressed onHide6"))
                         }
-                        title={"EngagementML6"}
-                        funFact={"AI is my dream field.6"}
+                        title={"Whak-A-Villain"}
+                        funFact={"This was my first project at Ironhack!"}
                       />
                     </div>
                   ) : null}

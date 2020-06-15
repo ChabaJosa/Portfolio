@@ -1,6 +1,5 @@
 import React from "react";
 import {
-  MDBCarousel,
   MDBContainer,
 } from "mdbreact";
 

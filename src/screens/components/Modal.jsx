@@ -28,6 +28,7 @@ export default function ProjectModal(props) {
       <ModalBody>
         {/* Insert iframe here */}
         <Player videoID={props.videoID} title={props.title}/>
+        <br />
         <p>{props.funFact}</p>
       </ModalBody>
       <ModalFooter>
