@@ -217,7 +217,7 @@ export default function Home(props) {
               {collapseProjects ? null : (
                 <div>
 
-                <button
+                {/* <button
                   className="btn"
                   style={{
                     float: "none",
@@ -246,10 +246,10 @@ export default function Home(props) {
                   }}
                 >
                   show more
-                </button>
+                </button> */}
                 </div>
               )}
-              <Collapse isOpened={false}>
+              <Collapse isOpened={true}>
                 <article className="col-12-xsmall work-item">
                   <Link
                     to="/"
@@ -400,37 +400,37 @@ export default function Home(props) {
                   <p>Marvel themed D.O.M. Manipulation whack-a-mole.</p>
                 </article>
                 {/* Whak a Villain above */}
-                {collapseProjects ? null : (
-                  <button
-                    className="btn"
-                    style={{
-                      float: "none",
-                      fontSize: "16px",
-                      mozAppearance: "none",
-                      webkitAppearance: "none",
-                      msAppearance: "none",
-                      appearance: "none",
-                      borderRadius: "0.35em",
-                      border: "solid 3px #efefef",
-                      color: "#787878 !important",
-                      display: "inline-block",
-                      fontWeight: "400",
-                      // height: "3.15em",
-                      lineHeight: "2.75em",
-                      minWidth: "7rem",
-                      textAlign: "center",
-                      textDecoration: "none",
-                      whiteSpace: "nowrap",
-                      margin: "1rem 0",
-                      color: "#a2a2a2",
-                      alignSelf: "center",
-                    }}
-                    onClick={() => {
-                      setCollapseProjects(false);
-                    }}
-                  >
-                    show less
-                  </button>
+                {collapseProjects ? null : ( null
+                  // <button
+                  //   className="btn"
+                  //   style={{
+                  //     float: "none",
+                  //     fontSize: "16px",
+                  //     mozAppearance: "none",
+                  //     webkitAppearance: "none",
+                  //     msAppearance: "none",
+                  //     appearance: "none",
+                  //     borderRadius: "0.35em",
+                  //     border: "solid 3px #efefef",
+                  //     color: "#787878 !important",
+                  //     display: "inline-block",
+                  //     fontWeight: "400",
+                  //     // height: "3.15em",
+                  //     lineHeight: "2.75em",
+                  //     minWidth: "7rem",
+                  //     textAlign: "center",
+                  //     textDecoration: "none",
+                  //     whiteSpace: "nowrap",
+                  //     margin: "1rem 0",
+                  //     color: "#a2a2a2",
+                  //     alignSelf: "center",
+                  //   }}
+                  //   onClick={() => {
+                  //     setCollapseProjects(false);
+                  //   }}
+                  // >
+                  //   show less
+                  // </button>
                 )}
               </Collapse>
             </div>
