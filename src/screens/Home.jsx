@@ -11,6 +11,7 @@ import Background from "./template-elements/images/codeBackground.jpg";
 import ReactTextCollapse from "react-text-collapse";
 import { Link } from "react-router-dom";
 import Modal from "./components/Modal";
+import Skills from "./components/Skills";
 
 export default function Home(props) {
   const TEXT_COLLAPSE_OPTIONS = {
@@ -128,6 +129,50 @@ export default function Home(props) {
               </p>
             </ReactTextCollapse>
           </section>
+          {/* One .5*/}
+          <section id="one">
+            <div>
+              <header className="major">
+                <h2>Skills </h2>
+              </header>
+              {/* <h4>Standout Soft Skills</h4> */}
+            </div>
+
+            {/* Skills */}
+            <div >
+                <Skills
+                style={{width:"70vh"}}
+                  title="Hard Skills"
+                  pb1={50}
+                  pb2={50}
+                  pb3={50}
+                  pb4={50}
+                  pb5={50}
+                  pb6={50}
+                  pbTitle1={"Something"}
+                  pbTitle2={"Something"}
+                  pbTitle3={"Something"}
+                  pbTitle4={"Something"}
+                  pbTitle5={"Something"}
+                  pbTitle6={"Something"}
+                />
+                <Skills
+                  title="Hard Skills"
+                  pb1={50}
+                  pb2={50}
+                  pb3={50}
+                  pb4={50}
+                  pb5={50}
+                  pb6={50}
+                  pbTitle1={"Something"}
+                  pbTitle2={"Something"}
+                  pbTitle3={"Something"}
+                  pbTitle4={"Something"}
+                  pbTitle5={"Something"}
+                  pbTitle6={"Something"}
+                />
+            </div>
+          </section>
           {/* Two */}
           <section id="two">
             <h2>Recent Work</h2>
@@ -136,16 +181,18 @@ export default function Home(props) {
                 {/* Insert Link here */}
                 <Link
                   to="/"
-                  style={{
-                    // display: "inline"
-                  }}
+                  style={
+                    {
+                      // display: "inline"
+                    }
+                  }
                   className="image fit thumb"
                   onClick={() => setModalShow1(true)}
                 >
                   <img
                     src={projectPic1}
                     alt=""
-                    style={{ height: "20rem", overflow: "hidden" }}
+                    style={{ height: "30vh", overflow: "hidden" }}
                   />
                   {modalShow1 === true ? (
                     <div>
@@ -169,16 +216,18 @@ export default function Home(props) {
                 {/* Eml above*/}
                 <Link
                   to="/"
-                  style={{
-                    // display: "inline"
-                  }}
+                  style={
+                    {
+                      // display: "inline"
+                    }
+                  }
                   className="image fit thumb"
                   onClick={() => setModalShow2(true)}
                 >
                   <img
                     src={projectPic2}
                     alt=""
-                    style={{ height: "20rem", overflow: "hidden" }}
+                    style={{ height: "30vh", overflow: "hidden" }}
                   />
                   {modalShow2 === true ? (
                     <div>
@@ -189,7 +238,9 @@ export default function Home(props) {
                           console.log("Pressed onHide2"))
                         }
                         title={"Super Marvel Directory"}
-                        funFact={"My favorite superhero App of the two! Very much looking forward to a React Native version"}
+                        funFact={
+                          "My favorite superhero App of the two! Very much looking forward to a React Native version"
+                        }
                       />
                     </div>
                   ) : null}
@@ -207,16 +258,18 @@ export default function Home(props) {
               <article className="col-6 col-12-xsmall work-item">
                 <Link
                   to="/"
-                  style={{
-                    // display: "inline"
-                  }}
+                  style={
+                    {
+                      // display: "inline"
+                    }
+                  }
                   className="image fit thumb"
                   onClick={() => setModalShow3(true)}
                 >
                   <img
                     src={projectPic3}
                     alt=""
-                    style={{ height: "20rem", overflow: "hidden" }}
+                    style={{ height: "30vh", overflow: "hidden" }}
                   />
                   {modalShow3 === true ? (
                     <div>
@@ -243,16 +296,18 @@ export default function Home(props) {
                 {/* Insert Link here */}
                 <Link
                   to="/"
-                  style={{
-                    // display: "inline"
-                  }}
+                  style={
+                    {
+                      // display: "inline"
+                    }
+                  }
                   className="image fit thumb"
                   onClick={() => setModalShow4(true)}
                 >
                   <img
                     src={projectPic4}
                     alt=""
-                    style={{ height: "20rem", overflow: "hidden" }}
+                    style={{ height: "30vh", overflow: "hidden" }}
                   />
                   {modalShow4 === true ? (
                     <div>
@@ -263,7 +318,9 @@ export default function Home(props) {
                           console.log("Pressed onHide4"))
                         }
                         title={"Trakster"}
-                        funFact={"I'm currently working this one! It's going to be MERN stack project."}
+                        funFact={
+                          "I'm currently working this one! It's going to be MERN stack project."
+                        }
                       />
                     </div>
                   ) : null}
@@ -276,16 +333,18 @@ export default function Home(props) {
               <article className="col-6 col-12-xsmall work-item">
                 <Link
                   to="/"
-                  style={{
-                    // display: "inline"
-                  }}
+                  style={
+                    {
+                      // display: "inline"
+                    }
+                  }
                   className="image fit thumb"
                   onClick={() => setModalShow5(true)}
                 >
                   <img
                     src={projectPic5}
                     alt=""
-                    style={{ height: "20rem", overflow: "hidden" }}
+                    style={{ height: "30vh", overflow: "hidden" }}
                   />
                   {modalShow5 === true ? (
                     <div>
@@ -296,7 +355,9 @@ export default function Home(props) {
                           console.log("Pressed onHide5"))
                         }
                         title={"Twitter Bot"}
-                        funFact={"Fun little Twitter bot that will eventually manage my Twitter all day on my old PC."}
+                        funFact={
+                          "Fun little Twitter bot that will eventually manage my Twitter all day on my old PC."
+                        }
                       />
                     </div>
                   ) : null}
@@ -312,16 +373,18 @@ export default function Home(props) {
                 {/* Insert Link here */}
                 <Link
                   to="/"
-                  style={{
-                    // display: "inline"
-                  }}
+                  style={
+                    {
+                      // display: "inline"
+                    }
+                  }
                   className="image fit thumb"
                   onClick={() => setModalShow6(true)}
                 >
                   <img
                     src={projectPic6}
                     alt=""
-                    style={{ height: "20rem", overflow: "hidden" }}
+                    style={{ height: "30vh", overflow: "hidden" }}
                   />
                   {modalShow6 === true ? (
                     <div>
