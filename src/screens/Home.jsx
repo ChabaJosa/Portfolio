@@ -9,6 +9,7 @@ import projectPic6 from "./template-elements/images/thumbs/06.png";
 import Background from "./template-elements/images/codeBackground.jpg";
 
 import ReactTextCollapse from "react-text-collapse";
+import { Collapse } from "react-collapse";
 import { Link } from "react-router-dom";
 import Modal from "./components/Modal";
 import Skills from "./components/Skills";
@@ -33,7 +34,7 @@ export default function Home(props) {
       color: "#787878 !important",
       display: "inline-block",
       fontWeight: "400",
-      height: "3.15em",
+      // height: "3.15em",
       // height: "calc(2.75em + 6px)",
       lineHeight: "2.75em",
       minWidth: "7rem",
@@ -50,6 +51,7 @@ export default function Home(props) {
   const [modalShow4, setModalShow4] = React.useState(false);
   const [modalShow5, setModalShow5] = React.useState(false);
   const [modalShow6, setModalShow6] = React.useState(false);
+  const [collapseProjects, setCollapseProjects] = React.useState(false);
 
   return (
     <>
@@ -129,7 +131,7 @@ export default function Home(props) {
               </p>
             </ReactTextCollapse>
           </section>
-         
+
           {/* Two */}
           <section id="two">
             <h2>Recent Work</h2>
@@ -212,156 +214,227 @@ export default function Home(props) {
                 </p>
               </article>
               {/* Super Directory App above */}
-              <article className="col-12-xsmall work-item">
-                <Link
-                  to="/"
-                  style={
-                    {
-                      // display: "inline"
-                    }
-                  }
-                  className="image fit thumb"
-                  onClick={() => setModalShow3(true)}
-                >
-                  <img
-                    src={projectPic3}
-                    alt=""
-                    // style={{ width:"20vw", overflow: "hidden" }}
-                  />
-                  {modalShow3 === true ? (
-                    <div>
-                      <Modal
-                        show={modalShow3}
-                        onHide={
-                          (() => setModalShow3(false),
-                          console.log("Pressed onHide"))
-                        }
-                        title={"React Native FoodApp"}
-                        funFact={"My first Mobile App!"}
-                      />
-                    </div>
-                  ) : null}
-                </Link>
+              {collapseProjects ? null : (
+                <div>
 
-                <h3 className="hover-underline-animation">
-                  React-Native Food App
-                </h3>
-                <p>First React-Native App (of many to come).</p>
-              </article>
-              {/* Food App above */}
-              <article className="col-12-xsmall work-item">
-                {/* Insert Link here */}
-                <Link
-                  to="/"
-                  style={
-                    {
-                      // display: "inline"
-                    }
-                  }
-                  className="image fit thumb"
-                  onClick={() => setModalShow4(true)}
+                <button
+                  className="btn"
+                  style={{
+                    float: "none",
+                    fontSize: "16px",
+                    mozAppearance: "none",
+                    webkitAppearance: "none",
+                    msAppearance: "none",
+                    appearance: "none",
+                    borderRadius: "0.35em",
+                    border: "solid 3px #efefef",
+                    color: "#787878 !important",
+                    display: "inline-block",
+                    fontWeight: "400",
+                    // height: "3.15em",
+                    lineHeight: "2.75em",
+                    minWidth: "7rem",
+                    textAlign: "center",
+                    textDecoration: "none",
+                    whiteSpace: "nowrap",
+                    margin: "1rem 0",
+                    color: "#a2a2a2",
+                    alignSelf: "center",
+                  }}
+                  onClick={() => {
+                    setCollapseProjects(true);
+                  }}
                 >
-                  <img
-                    src={projectPic4}
-                    alt=""
-                    // style={{ width:"20vw", overflow: "hidden" }}
-                  />
-                  {modalShow4 === true ? (
-                    <div>
-                      <Modal
-                        show={modalShow4}
-                        onHide={
-                          (() => setModalShow4(false),
-                          console.log("Pressed onHide4"))
-                        }
-                        title={"Trakster"}
-                        funFact={
-                          "I'm currently working this one! It's going to be MERN stack project."
-                        }
-                      />
-                    </div>
-                  ) : null}
-                </Link>
+                  show more
+                </button>
+                </div>
+              )}
+              <Collapse isOpened={false}>
+                <article className="col-12-xsmall work-item">
+                  <Link
+                    to="/"
+                    style={
+                      {
+                        // display: "inline"
+                      }
+                    }
+                    className="image fit thumb"
+                    onClick={() => setModalShow3(true)}
+                  >
+                    <img
+                      src={projectPic3}
+                      alt=""
+                      // style={{ width:"20vw", overflow: "hidden" }}
+                    />
+                    {modalShow3 === true ? (
+                      <div>
+                        <Modal
+                          show={modalShow3}
+                          onHide={
+                            (() => setModalShow3(false),
+                            console.log("Pressed onHide"))
+                          }
+                          title={"React Native FoodApp"}
+                          funFact={"My first Mobile App!"}
+                        />
+                      </div>
+                    ) : null}
+                  </Link>
 
-                <h3 className="hover-underline-animation">Trakster</h3>
-                <p>Prototype expense tracker (working progress).</p>
-              </article>
-              {/* Trakster above */}
-              <article className="col-12-xsmall work-item">
-                <Link
-                  to="/"
-                  style={
-                    {
-                      // display: "inline"
+                  <h3 className="hover-underline-animation">
+                    React-Native Food App
+                  </h3>
+                  <p>First React-Native App (of many to come).</p>
+                </article>
+                {/* Food App above */}
+                <article className="col-12-xsmall work-item">
+                  {/* Insert Link here */}
+                  <Link
+                    to="/"
+                    style={
+                      {
+                        // display: "inline"
+                      }
                     }
-                  }
-                  className="image fit thumb"
-                  onClick={() => setModalShow5(true)}
-                >
-                  <img
-                    src={projectPic5}
-                    alt=""
-                    // style={{ width:"20vw", overflow: "hidden" }}
-                  />
-                  {modalShow5 === true ? (
-                    <div>
-                      <Modal
-                        show={modalShow5}
-                        onHide={
-                          (() => setModalShow5(false),
-                          console.log("Pressed onHide5"))
-                        }
-                        title={"Twitter Bot"}
-                        funFact={
-                          "Fun little Twitter bot that will eventually manage my Twitter all day on my old PC."
-                        }
-                      />
-                    </div>
-                  ) : null}
-                </Link>
+                    className="image fit thumb"
+                    onClick={() => setModalShow4(true)}
+                  >
+                    <img
+                      src={projectPic4}
+                      alt=""
+                      // style={{ width:"20vw", overflow: "hidden" }}
+                    />
+                    {modalShow4 === true ? (
+                      <div>
+                        <Modal
+                          show={modalShow4}
+                          onHide={
+                            (() => setModalShow4(false),
+                            console.log("Pressed onHide4"))
+                          }
+                          title={"Trakster"}
+                          funFact={
+                            "I'm currently working this one! It's going to be MERN stack project."
+                          }
+                        />
+                      </div>
+                    ) : null}
+                  </Link>
 
-                <h3 className="hover-underline-animation">Twitter Bot</h3>
-                <p>
-                  So you can doubt any liked and retweeted content on your feed!
-                </p>
-              </article>
-              {/* Twitter Bot above */}
-              <article className="col-12-xsmall work-item">
-                {/* Insert Link here */}
-                <Link
-                  to="/"
-                  style={
-                    {
-                      // display: "inline"
+                  <h3 className="hover-underline-animation">Trakster</h3>
+                  <p>Prototype expense tracker (working progress).</p>
+                </article>
+                {/* Trakster above */}
+                <article className="col-12-xsmall work-item">
+                  <Link
+                    to="/"
+                    style={
+                      {
+                        // display: "inline"
+                      }
                     }
-                  }
-                  className="image fit thumb"
-                  onClick={() => setModalShow6(true)}
-                >
-                  <img
-                    src={projectPic6}
-                    alt=""
-                    // style={{ width:"20vw", overflow: "hidden" }}
-                  />
-                  {modalShow6 === true ? (
-                    <div>
-                      <Modal
-                        show={modalShow6}
-                        onHide={
-                          (() => setModalShow6(false),
-                          console.log("Pressed onHide6"))
-                        }
-                        title={"Whak-A-Villain"}
-                        funFact={"This was my first project at Ironhack!"}
-                      />
-                    </div>
-                  ) : null}
-                </Link>
-                <h3 className="hover-underline-animation">Whak-A-Villain</h3>
-                <p>Marvel themed D.O.M. Manipulation whack-a-mole.</p>
-              </article>
-              {/* Whak a Villain above */}
+                    className="image fit thumb"
+                    onClick={() => setModalShow5(true)}
+                  >
+                    <img
+                      src={projectPic5}
+                      alt=""
+                      // style={{ width:"20vw", overflow: "hidden" }}
+                    />
+                    {modalShow5 === true ? (
+                      <div>
+                        <Modal
+                          show={modalShow5}
+                          onHide={
+                            (() => setModalShow5(false),
+                            console.log("Pressed onHide5"))
+                          }
+                          title={"Twitter Bot"}
+                          funFact={
+                            "Fun little Twitter bot that will eventually manage my Twitter all day on my old PC."
+                          }
+                        />
+                      </div>
+                    ) : null}
+                  </Link>
+
+                  <h3 className="hover-underline-animation">Twitter Bot</h3>
+                  <p>
+                    So you can doubt any liked and retweeted content on your
+                    feed!
+                  </p>
+                </article>
+                {/* Twitter Bot above */}
+                <article className="col-12-xsmall work-item">
+                  {/* Insert Link here */}
+                  <Link
+                    to="/"
+                    style={
+                      {
+                        // display: "inline"
+                      }
+                    }
+                    className="image fit thumb"
+                    onClick={() => setModalShow6(true)}
+                  >
+                    <img
+                      src={projectPic6}
+                      alt=""
+                      // style={{ width:"20vw", overflow: "hidden" }}
+                    />
+                    {modalShow6 === true ? (
+                      <div>
+                        <Modal
+                          show={modalShow6}
+                          onHide={
+                            (() => setModalShow6(false),
+                            console.log("Pressed onHide6"))
+                          }
+                          title={"Whak-A-Villain"}
+                          funFact={"This was my first project at Ironhack!"}
+                        />
+                      </div>
+                    ) : null}
+                  </Link>
+                  <h3 className="hover-underline-animation">Whak-A-Villain</h3>
+                  <p>Marvel themed D.O.M. Manipulation whack-a-mole.</p>
+                </article>
+                {/* Whak a Villain above */}
+                {collapseProjects ? null : (
+                  <button
+                    className="btn"
+                    style={{
+                      float: "none",
+                      fontSize: "16px",
+                      mozAppearance: "none",
+                      webkitAppearance: "none",
+                      msAppearance: "none",
+                      appearance: "none",
+                      borderRadius: "0.35em",
+                      border: "solid 3px #efefef",
+                      color: "#787878 !important",
+                      display: "inline-block",
+                      fontWeight: "400",
+                      // height: "3.15em",
+                      lineHeight: "2.75em",
+                      minWidth: "7rem",
+                      textAlign: "center",
+                      textDecoration: "none",
+                      whiteSpace: "nowrap",
+                      margin: "1rem 0",
+                      color: "#a2a2a2",
+                      alignSelf: "center",
+                    }}
+                    onClick={() => {
+                      setCollapseProjects(false);
+                    }}
+                  >
+                    show less
+                  </button>
+                )}
+              </Collapse>
             </div>
+
             {/* Download resume btn */}
             <ul className="actions">
               <li>
@@ -376,8 +449,8 @@ export default function Home(props) {
               </li>
             </ul>
           </section>
-           {/* Two and a half*/}
-           <section id="one">
+          {/* Two and a half*/}
+          <section id="one">
             <div>
               <header className="major">
                 <h2>Skills </h2>
@@ -386,26 +459,26 @@ export default function Home(props) {
             </div>
 
             {/* Skills */}
-            <div >
-                <Skills
-                style={{width:"70vh"}}
-                  title="Top 3 Hard Skills"
-                  pbValues1={75}
-                  pbValues2={85}
-                  pbValues3={60}
-                  pbTitle1={"ReactJS"}
-                  pbTitle2={"ES6"}
-                  pbTitle3={"NodeJS"}
-                />
-                <Skills
-                  title="Top 3 Soft Skills"
-                  pbValues1={90}
-                  pbValues2={85}
-                  pbValues3={95}
-                  pbTitle1={"Critical Thinker"}
-                  pbTitle2={"Team Player"}
-                  pbTitle3={"Time management"}
-                />
+            <div>
+              <Skills
+                style={{ width: "70vh" }}
+                title="Top 3 Hard Skills"
+                pbValues1={75}
+                pbValues2={85}
+                pbValues3={60}
+                pbTitle1={"ReactJS"}
+                pbTitle2={"ES6"}
+                pbTitle3={"NodeJS"}
+              />
+              <Skills
+                title="Top 3 Soft Skills"
+                pbValues1={90}
+                pbValues2={85}
+                pbValues3={95}
+                pbTitle1={"Critical Thinker"}
+                pbTitle2={"Team Player"}
+                pbTitle3={"Time management"}
+              />
             </div>
           </section>
           {/* Three */}
