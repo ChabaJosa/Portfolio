@@ -177,7 +177,7 @@ export default function Home(props) {
           <section id="two">
             <h2>Recent Work</h2>
             <div className="row">
-              <article className="col-6 col-12-xsmall work-item">
+              <article className="col-12-xsmall work-item">
                 {/* Insert Link here */}
                 <Link
                   to="/"
@@ -192,7 +192,7 @@ export default function Home(props) {
                   <img
                     src={projectPic1}
                     alt=""
-                    style={{ height: "30vh", overflow: "hidden" }}
+                    // style={{ width:"20vw", overflow: "hidden" }}
                   />
                   {modalShow1 === true ? (
                     <div>
@@ -212,7 +212,7 @@ export default function Home(props) {
                 <h3 className="hover-underline-animation">EngagementML</h3>
                 <p>Instagram Insights + Machine Learning recommendations.</p>
               </article>
-              <article className="col-6 col-12-xsmall work-item">
+              <article className="col-12-xsmall work-item">
                 {/* Eml above*/}
                 <Link
                   to="/"
@@ -227,7 +227,7 @@ export default function Home(props) {
                   <img
                     src={projectPic2}
                     alt=""
-                    style={{ height: "30vh", overflow: "hidden" }}
+                    // style={{ width:"20vw", overflow: "hidden" }}
                   />
                   {modalShow2 === true ? (
                     <div>
@@ -255,7 +255,7 @@ export default function Home(props) {
                 </p>
               </article>
               {/* Super Directory App above */}
-              <article className="col-6 col-12-xsmall work-item">
+              <article className="col-12-xsmall work-item">
                 <Link
                   to="/"
                   style={
@@ -269,7 +269,7 @@ export default function Home(props) {
                   <img
                     src={projectPic3}
                     alt=""
-                    style={{ height: "30vh", overflow: "hidden" }}
+                    // style={{ width:"20vw", overflow: "hidden" }}
                   />
                   {modalShow3 === true ? (
                     <div>
@@ -292,7 +292,7 @@ export default function Home(props) {
                 <p>First React-Native App (of many to come).</p>
               </article>
               {/* Food App above */}
-              <article className="col-6 col-12-xsmall work-item">
+              <article className="col-12-xsmall work-item">
                 {/* Insert Link here */}
                 <Link
                   to="/"
@@ -307,7 +307,7 @@ export default function Home(props) {
                   <img
                     src={projectPic4}
                     alt=""
-                    style={{ height: "30vh", overflow: "hidden" }}
+                    // style={{ width:"20vw", overflow: "hidden" }}
                   />
                   {modalShow4 === true ? (
                     <div>
@@ -330,7 +330,7 @@ export default function Home(props) {
                 <p>Prototype expense tracker (working progress).</p>
               </article>
               {/* Trakster above */}
-              <article className="col-6 col-12-xsmall work-item">
+              <article className="col-12-xsmall work-item">
                 <Link
                   to="/"
                   style={
@@ -344,7 +344,7 @@ export default function Home(props) {
                   <img
                     src={projectPic5}
                     alt=""
-                    style={{ height: "30vh", overflow: "hidden" }}
+                    // style={{ width:"20vw", overflow: "hidden" }}
                   />
                   {modalShow5 === true ? (
                     <div>
@@ -369,7 +369,7 @@ export default function Home(props) {
                 </p>
               </article>
               {/* Twitter Bot above */}
-              <article className="col-6 col-12-xsmall work-item">
+              <article className="col-12-xsmall work-item">
                 {/* Insert Link here */}
                 <Link
                   to="/"
@@ -384,7 +384,7 @@ export default function Home(props) {
                   <img
                     src={projectPic6}
                     alt=""
-                    style={{ height: "30vh", overflow: "hidden" }}
+                    // style={{ width:"20vw", overflow: "hidden" }}
                   />
                   {modalShow6 === true ? (
                     <div>
@@ -427,7 +427,7 @@ export default function Home(props) {
               <div className="col-8 col-12-small">
                 <form method="post" action="#">
                   <div className="row gtr-uniform gtr-50">
-                    <div className="col-6 col-12-xsmall">
+                    <div className="col-12-xsmall">
                       <input
                         type="text"
                         name="name"
@@ -435,7 +435,7 @@ export default function Home(props) {
                         placeholder="Name"
                       />
                     </div>
-                    <div className="col-6 col-12-xsmall">
+                    <div className="col-12-xsmall">
                       <input
                         type="email"
                         name="email"
