@@ -129,50 +129,7 @@ export default function Home(props) {
               </p>
             </ReactTextCollapse>
           </section>
-          {/* One .5*/}
-          <section id="one">
-            <div>
-              <header className="major">
-                <h2>Skills </h2>
-              </header>
-              {/* <h4>Standout Soft Skills</h4> */}
-            </div>
-
-            {/* Skills */}
-            <div >
-                <Skills
-                style={{width:"70vh"}}
-                  title="Hard Skills"
-                  pb1={50}
-                  pb2={50}
-                  pb3={50}
-                  pb4={50}
-                  pb5={50}
-                  pb6={50}
-                  pbTitle1={"Something"}
-                  pbTitle2={"Something"}
-                  pbTitle3={"Something"}
-                  pbTitle4={"Something"}
-                  pbTitle5={"Something"}
-                  pbTitle6={"Something"}
-                />
-                <Skills
-                  title="Hard Skills"
-                  pb1={50}
-                  pb2={50}
-                  pb3={50}
-                  pb4={50}
-                  pb5={50}
-                  pb6={50}
-                  pbTitle1={"Something"}
-                  pbTitle2={"Something"}
-                  pbTitle3={"Something"}
-                  pbTitle4={"Something"}
-                  pbTitle5={"Something"}
-                  pbTitle6={"Something"}
-                />
-            </div>
-          </section>
+         
           {/* Two */}
           <section id="two">
             <h2>Recent Work</h2>
@@ -418,6 +375,38 @@ export default function Home(props) {
                 </a>
               </li>
             </ul>
+          </section>
+           {/* Two and a half*/}
+           <section id="one">
+            <div>
+              <header className="major">
+                <h2>Skills </h2>
+              </header>
+              {/* <h4>Standout Soft Skills</h4> */}
+            </div>
+
+            {/* Skills */}
+            <div >
+                <Skills
+                style={{width:"70vh"}}
+                  title="Top 3 Hard Skills"
+                  pbValues1={75}
+                  pbValues2={85}
+                  pbValues3={60}
+                  pbTitle1={"ReactJS"}
+                  pbTitle2={"ES6"}
+                  pbTitle3={"NodeJS"}
+                />
+                <Skills
+                  title="Top 3 Soft Skills"
+                  pbValues1={90}
+                  pbValues2={85}
+                  pbValues3={95}
+                  pbTitle1={"Critical Thinker"}
+                  pbTitle2={"Team Player"}
+                  pbTitle3={"Time management"}
+                />
+            </div>
           </section>
           {/* Three */}
           <section id="three">

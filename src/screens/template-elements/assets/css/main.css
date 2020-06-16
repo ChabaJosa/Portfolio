@@ -3245,3 +3245,7 @@ input, select, textarea {
 		transform: scaleX(1);
 		transform-origin: bottom left;
 	}
+
+	.progress-bar{
+		background-color: "#03B2E8"!important;
+	}

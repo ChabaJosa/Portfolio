@@ -7,83 +7,44 @@ export default function Skills(props) {
 
       <div className="card shadow mb-4">
         <div className="card-header py-3">
-          <h6 className="m-0 font-weight-bold text-primary">{props.title}</h6>
+          <h6 className="m-0 font-weight-bold text-primary" style={{fontSize:"1.3rem", color: "#03B2E8"}}>{props.title}</h6>
         </div>
         <div className="card-body" style={{ textAlign: "left" }}>
           <h4 className="small font-weight-bold">
-            {props.pbTitle1} <span className="float-right">{}</span>
+            {props.pbTitle1} <span className="float-right">{props.pbValues1}</span>
           </h4>
           <div className="progress mb-4">
             <div
-              className="progress-bar bg-warning"
+              className="progress-bar "
               role="progressbar"
-              style={{ width: `${props.pb1}%` }}
-              aria-valuenow={50}
+              style={{ width: `${props.pbValues1}%`, backgroundColor:"#03B2E8" }}
+              aria-valuenow={props.pbValues1}
               aria-valuemin={0}
               aria-valuemax={100}
             />
           </div>
           <h4 className="small font-weight-bold">
-            {props.pbTitle2} <span className="float-right">{}</span>
+            {props.pbTitle2} <span className="float-right">{props.pbValues2}</span>
           </h4>
           <div className="progress mb-4">
             <div
-              className="progress-bar bg-primary"
+              className="progress-bar "
               role="progressbar"
-              style={{ width: `${props.pb2}%` }}
-              aria-valuenow={70}
+              style={{ width: `${props.pbValues2}%`, backgroundColor:"#03B2E8!important" }}
+              aria-valuenow={props.pbValues2}
               aria-valuemin={0}
               aria-valuemax={100}
             />
           </div>
           <h4 className="small font-weight-bold">
-            {props.pbTitle3} <span className="float-right">{}</span>
+            {props.pbTitle3} <span className="float-right">{props.pbValues3}</span>
           </h4>
           <div className="progress mb-4">
             <div
-              className="progress-bar bg-success"
+              className="progress-bar "
               role="progressbar"
-              style={{ width: `${props.pb3}%` }}
-              aria-valuenow={40}
-              aria-valuemin={0}
-              aria-valuemax={100}
-            />
-          </div>
-          <h4 className="small font-weight-bold">
-            {props.pbTitle4} <span className="float-right">{}</span>
-          </h4>
-          <div className="progress mb-4">
-            <div
-              className="progress-bar bg-primary"
-              role="progressbar"
-              style={{ width: `${props.pb4}%` }}
-              aria-valuenow={10}
-              aria-valuemin={0}
-              aria-valuemax={100}
-            />
-          </div>
-          <h4 className="small font-weight-bold">
-            {props.pbTitle5} <span className="float-right">{}</span>
-          </h4>
-          <div className="progress mb-4">
-            <div
-              className="progress-bar bg-success"
-              role="progressbar"
-              style={{ width: `${props.pb5}%` }}
-              aria-valuenow={30}
-              aria-valuemin={0}
-              aria-valuemax={100}
-            />
-          </div>
-          <h4 className="small font-weight-bold">
-            {props.pbTitle6} <span className="float-right">{}</span>
-          </h4>
-          <div className="progress">
-            <div
-              className="progress-bar bg-danger"
-              role="progressbar"
-              style={{ width: `${props.pb6}%` }}
-              aria-valuenow={90}
+              style={{ width: `${props.pbValues3}%`, backgroundColor:"#03B2E8" }}
+              aria-valuenow={props.pbValues3}
               aria-valuemin={0}
               aria-valuemax={100}
             />
