@@ -542,7 +542,11 @@ export default function Home(props) {
                     <h3 className="icon solid fa-envelope">
                       <span className="label">Email</span>
                     </h3>
-                    <a href="#">chabagjg@gmail.com</a>
+                    <p>{`chabagjg
+                    @\n
+                    gmail
+                    .com`}
+                    </p>
                   </li>
                 </ul>
               </div>
@@ -575,13 +579,7 @@ export default function Home(props) {
                   <span className="label">Github</span>
                 </a>
               </li>
-
-              {/* <Route path='/privacy-policy' component={() => { 
-					window.location.href = 'https://google.com/'; 
-					return null;
-				}}/> */}
-
-              <li>
+              {/* <li>
                 <a
                   href="https://linkedin.com/in/chaba-josa/"
                   target="_blank"
@@ -590,7 +588,7 @@ export default function Home(props) {
                 >
                   <span className="label">LinkedIn</span>
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </footer>
