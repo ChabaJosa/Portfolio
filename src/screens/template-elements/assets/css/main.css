@@ -3251,3 +3251,12 @@ input, select, textarea {
 	}
 
 	.close {display: none;}
+
+	.modalBtn{
+		display: flex;
+		justify-content: center;
+	}
+
+	.image.avatar img {
+		border: 3px solid white;
+	}

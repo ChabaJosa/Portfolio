@@ -101,9 +101,7 @@ export default function Home(props) {
                 cohort with a +3 year background in content strategy and social
                 media growth hacks. My current aspirations are to grow within
                 the tech industry while continuing to learn about programming
-                and data analysis. Specialties: Social Media, Organic Audience
-                Growth, JavaScript (ES6), HTML5, CSS3, ReactJS, NodeJS,
-                ReactNative.
+                and data analysis. 
               </p>
               <p>
                 My education started in my home country of Venezuela and
@@ -128,6 +126,11 @@ export default function Home(props) {
                 growth. My team won best final project for our App that used
                 machine learning and web scraping to help plan out social media
                 content strategies.
+              </p>
+              <p>
+                Specialties: Social Media, Organic Audience
+                Growth, JavaScript (ES6), HTML5, CSS3, ReactJS, NodeJS,
+                ReactNative.
               </p>
             </ReactTextCollapse>
           </section>
@@ -163,6 +166,7 @@ export default function Home(props) {
                         }
                         title={"EngagementML"}
                         funFact={"AI is my dream field."}
+                        hyperLink={"https://engagementml.herokuapp.com/"}
                         videoID={"cdzeYRqonuw"}
                       />
                     </div>
@@ -200,6 +204,7 @@ export default function Home(props) {
                         funFact={
                           "My favorite superhero App of the two! Very much looking forward to a React Native version"
                         }
+                        hyperLink={"https://super-directory.netlify.app/"}
                         videoID={"Vq5letSRWPM"}
                       />
                     </div>
@@ -277,6 +282,8 @@ export default function Home(props) {
                           }
                           title={"React Native FoodApp"}
                           funFact={"My first Mobile App!"}
+                          hyperLink={"https://github.com/ChabaJosa/FoodAppRN"}
+                          videoID={"4Jo3q3iE_EE"}
                         />
                       </div>
                     ) : null}
@@ -314,9 +321,9 @@ export default function Home(props) {
                             console.log("Pressed onHide4"))
                           }
                           title={"Trakster"}
-                          funFact={
-                            "I'm currently working this one! It's going to be MERN stack project."
-                          }
+                          funFact={"I'm currently working this one! It's going to be MERN stack project."}
+                          hyperLink={"https://trakster.herokuapp.com/"}
+                          videoID={""}
                         />
                       </div>
                     ) : null}
@@ -354,6 +361,8 @@ export default function Home(props) {
                           funFact={
                             "Fun little Twitter bot that will eventually manage my Twitter all day on my old PC."
                           }
+                          hyperLink={"https://github.com/ChabaJosa/TwitterBot"}
+                          videoID=""
                         />
                       </div>
                     ) : null}
@@ -393,6 +402,8 @@ export default function Home(props) {
                           }
                           title={"Whak-A-Villain"}
                           funFact={"This was my first project at Ironhack!"}
+                          hyperLink={"https://chabajosa.github.io/Whak-a-villain/"}
+                          videoID={"w3eXuTN9vq0"}
                         />
                       </div>
                     ) : null}
@@ -442,10 +453,10 @@ export default function Home(props) {
                 <a
                   target="_blank"
                   href="https://github.com/ChabaJosa?tab=repositories"
-                  class="button primary icon fa-download"
+                  className="hover-underline-animation"
                   rel="noopener noreferrer"
                 >
-                  All Repositories
+                  Click here for all my repos!
                 </a>
               </li>
             </ul>
