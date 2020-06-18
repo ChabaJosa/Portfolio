@@ -7,10 +7,10 @@ export default function Skills(props) {
 
       <div className="card shadow mb-4">
         <div className="card-header py-3">
-          <h6 className="m-0 font-weight-bold text-primary" style={{fontSize:"1.3rem", color: "#03B2E8"}}>{props.title}</h6>
+          <h6 className="m-0 font-weight-bold text-warning" style={{fontSize:"1.3rem", color: "#03B2E8"}}>{props.title}</h6>
         </div>
         <div className="card-body" style={{ textAlign: "left" }}>
-          <h4 className="small font-weight-bold">
+          <h4 className="small font-weight-bold text-success">
             {props.pbTitle1} <span className="float-right">{props.pbValues1}</span>
           </h4>
           <div className="progress mb-4">
@@ -23,7 +23,7 @@ export default function Skills(props) {
               aria-valuemax={100}
             />
           </div>
-          <h4 className="small font-weight-bold">
+          <h4 className="small font-weight-bold text-success">
             {props.pbTitle2} <span className="float-right">{props.pbValues2}</span>
           </h4>
           <div className="progress mb-4">
@@ -36,7 +36,7 @@ export default function Skills(props) {
               aria-valuemax={100}
             />
           </div>
-          <h4 className="small font-weight-bold">
+          <h4 className="small font-weight-bold text-success">
             {props.pbTitle3} <span className="float-right">{props.pbValues3}</span>
           </h4>
           <div className="progress mb-4">

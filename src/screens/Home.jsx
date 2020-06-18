@@ -93,7 +93,7 @@ export default function Home(props) {
           {/* One */}
           <section id="one">
             <header className="major">
-              <h2>About Me</h2>
+              <h2>My Story</h2>
             </header>
             <ReactTextCollapse options={TEXT_COLLAPSE_OPTIONS}>
               <p>
@@ -101,7 +101,7 @@ export default function Home(props) {
                 cohort with a +3 year background in content strategy and social
                 media growth hacks. My current aspirations are to grow within
                 the tech industry while continuing to learn about programming
-                and data analysis. 
+                and data analysis.
               </p>
               <p>
                 My education started in my home country of Venezuela and
@@ -128,16 +128,15 @@ export default function Home(props) {
                 content strategies.
               </p>
               <p>
-                Specialties: Social Media, Organic Audience
-                Growth, JavaScript (ES6), HTML5, CSS3, ReactJS, NodeJS,
-                ReactNative.
+                Specialties: Social Media, Organic Audience Growth, JavaScript
+                (ES6), HTML5, CSS3, ReactJS, NodeJS, ReactNative.
               </p>
             </ReactTextCollapse>
           </section>
 
           {/* Two */}
           <section id="two">
-            <h2>Recent Work</h2>
+            <h2>Highlight Projects</h2>
             <div className="row">
               <article className="col-12-xsmall work-item">
                 {/* Insert Link here */}
@@ -166,14 +165,27 @@ export default function Home(props) {
                         }
                         title={"EngagementML"}
                         funFact={"AI is my dream field."}
+                        technologies={"HTML5, CSS3, JavaScript, ReactJS, Node.js, Express.js, Jquery, Web Scraping, Python, Machine Learning"}
                         hyperLink={"https://engagementml.herokuapp.com/"}
                         videoID={"cdzeYRqonuw"}
                       />
                     </div>
                   ) : null}
                 </Link>
-                <h3 className="hover-underline-animation">EngagementML</h3>
+                <Link
+                  to="/"
+                  // className="image fit thumb"
+                  onClick={() => setModalShow5(true)}
+                >
+                  <h3 className="hover-underline-animation">EngagementML</h3>
+                </Link>
                 <p>Instagram Insights + Machine Learning recommendations.</p>
+                <p>
+                  <span className="hover-underline-animation">
+                    Video Duration:
+                  </span>{" "}
+                  +7 min
+                </p>
               </article>
               <article className="col-12-xsmall work-item">
                 {/* Eml above*/}
@@ -204,26 +216,37 @@ export default function Home(props) {
                         funFact={
                           "My favorite superhero App of the two! Very much looking forward to a React Native version"
                         }
+                        technologies={"HTML5, CSS3, JavaScript, ReactJS and Marvel, Superhero  & YouTube API"}
                         hyperLink={"https://super-directory.netlify.app/"}
                         videoID={"Vq5letSRWPM"}
                       />
                     </div>
                   ) : null}
                 </Link>
-
-                <h3 className="hover-underline-animation">
-                  Super Marvel Directory
-                </h3>
+                <Link
+                  to="/"
+                  // className="image fit thumb"
+                  onClick={() => setModalShow5(true)}
+                >
+                  <h3 className="hover-underline-animation">
+                    Super Marvel Directory
+                  </h3>
+                </Link>
                 <p>
                   Power-Stats, fun facts, videos and comics your favorite
                   heroes!{" "}
+                </p>
+                <p>
+                  <span className="hover-underline-animation">
+                    Video Duration:
+                  </span>{" "}
+                  +2 min
                 </p>
               </article>
               {/* Super Directory App above */}
               {collapseProjects ? null : (
                 <div>
-
-                {/* <button
+                  {/* <button
                   className="btn"
                   style={{
                     float: "none",
@@ -259,11 +282,6 @@ export default function Home(props) {
                 <article className="col-12-xsmall work-item">
                   <Link
                     to="/"
-                    style={
-                      {
-                        // display: "inline"
-                      }
-                    }
                     className="image fit thumb"
                     onClick={() => setModalShow3(true)}
                   >
@@ -282,28 +300,35 @@ export default function Home(props) {
                           }
                           title={"React Native FoodApp"}
                           funFact={"My first Mobile App!"}
+                          technologies={"React-Native, React Hooks, contextAPI"}
                           hyperLink={"https://github.com/ChabaJosa/FoodAppRN"}
                           videoID={"4Jo3q3iE_EE"}
                         />
                       </div>
                     ) : null}
                   </Link>
-
-                  <h3 className="hover-underline-animation">
-                    React-Native Food App
-                  </h3>
+                  <Link
+                    to="/"
+                    // className="image fit thumb"
+                    onClick={() => setModalShow5(true)}
+                  >
+                    <h3 className="hover-underline-animation">
+                      React-Native Food App
+                    </h3>
+                  </Link>
                   <p>First React-Native App (of many to come).</p>
+                  <p>
+                    <span className="hover-underline-animation">
+                      Video Duration:
+                    </span>
+                    {" >"} 1 min
+                  </p>
                 </article>
                 {/* Food App above */}
                 <article className="col-12-xsmall work-item">
                   {/* Insert Link here */}
                   <Link
                     to="/"
-                    style={
-                      {
-                        // display: "inline"
-                      }
-                    }
                     className="image fit thumb"
                     onClick={() => setModalShow4(true)}
                   >
@@ -321,26 +346,29 @@ export default function Home(props) {
                             console.log("Pressed onHide4"))
                           }
                           title={"Trakster"}
-                          funFact={"I'm currently working this one! It's going to be MERN stack project."}
+                          funFact={
+                            "I'm currently working this one! It's going to be MERN stack project."
+                          }
+                          technologies={[""]}
                           hyperLink={"https://trakster.herokuapp.com/"}
                           videoID={""}
                         />
                       </div>
                     ) : null}
                   </Link>
-
-                  <h3 className="hover-underline-animation">Trakster</h3>
+                  <Link
+                    to="/"
+                    // className="image fit thumb"
+                    onClick={() => setModalShow5(true)}
+                  >
+                    <h3 className="hover-underline-animation">Trakster</h3>
+                  </Link>
                   <p>Prototype expense tracker (working progress).</p>
                 </article>
                 {/* Trakster above */}
                 <article className="col-12-xsmall work-item">
                   <Link
                     to="/"
-                    style={
-                      {
-                        // display: "inline"
-                      }
-                    }
                     className="image fit thumb"
                     onClick={() => setModalShow5(true)}
                   >
@@ -361,14 +389,20 @@ export default function Home(props) {
                           funFact={
                             "Fun little Twitter bot that will eventually manage my Twitter all day on my old PC."
                           }
+                          technologies={[""]}
                           hyperLink={"https://github.com/ChabaJosa/TwitterBot"}
                           videoID=""
                         />
                       </div>
                     ) : null}
                   </Link>
-
-                  <h3 className="hover-underline-animation">Twitter Bot</h3>
+                  <Link
+                    to="/"
+                    // className="image fit thumb"
+                    onClick={() => setModalShow5(true)}
+                  >
+                    <h3 className="hover-underline-animation">Twitter Bot</h3>
+                  </Link>
                   <p>
                     So you can doubt any liked and retweeted content on your
                     feed!
@@ -379,11 +413,6 @@ export default function Home(props) {
                   {/* Insert Link here */}
                   <Link
                     to="/"
-                    style={
-                      {
-                        // display: "inline"
-                      }
-                    }
                     className="image fit thumb"
                     onClick={() => setModalShow6(true)}
                   >
@@ -402,17 +431,35 @@ export default function Home(props) {
                           }
                           title={"Whak-A-Villain"}
                           funFact={"This was my first project at Ironhack!"}
-                          hyperLink={"https://chabajosa.github.io/Whak-a-villain/"}
+                          technologies={"JavaScript, HTML5, CSS3, DOM Manipulation"}
+                          hyperLink={
+                            "https://chabajosa.github.io/Whak-a-villain/"
+                          }
                           videoID={"w3eXuTN9vq0"}
                         />
                       </div>
                     ) : null}
                   </Link>
-                  <h3 className="hover-underline-animation">Whak-A-Villain</h3>
+                  <Link
+                    to="/"
+                    // className="image fit thumb"
+                    onClick={() => setModalShow5(true)}
+                  >
+                    <h3 className="hover-underline-animation">
+                      Whak-A-Villain
+                    </h3>
+                  </Link>
                   <p>Marvel themed D.O.M. Manipulation whack-a-mole.</p>
+                  <p>
+                    <span className="hover-underline-animation">
+                      Video Duration:
+                    </span>{" "}
+                    2 min
+                  </p>
                 </article>
                 {/* Whak a Villain above */}
-                {collapseProjects ? null : ( null
+                {
+                  collapseProjects ? null : null
                   // <button
                   //   className="btn"
                   //   style={{
@@ -443,7 +490,7 @@ export default function Home(props) {
                   // >
                   //   show less
                   // </button>
-                )}
+                }
               </Collapse>
             </div>
 
@@ -553,7 +600,8 @@ export default function Home(props) {
                     <h3 className="icon solid fa-envelope">
                       <span className="label">Email</span>
                     </h3>
-                    <p>{`chabagjg
+                    <p>
+                      {`chabagjg
                     @\n
                     gmail
                     .com`}

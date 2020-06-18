@@ -28,7 +28,8 @@ export default function ProjectModal(props) {
       <ModalBody>
         {/* Insert iframe here */}
         <div className="modalBodyDiv">
-          <p style={{padding: "0", marginBottom: "1vh" }}><span className="hover-underline-animation " >Fun Fact:</span>{" " + props.funFact}</p>
+          <p style={{padding: "0", marginBottom: "0.5vh" }}><span className="hover-underline-animation " >Fun Fact:</span>{" " + props.funFact}</p>
+          <p style={{padding: "0", marginBottom: "1vh" }}><span className="hover-underline-animation " >Technologies:</span>{" " + props.technologies}</p>
           <br />
           <Player videoID={props.videoID} title={props.title} />
           {/* <p>Check it out!</p> */}
