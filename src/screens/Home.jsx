@@ -349,7 +349,7 @@ export default function Home(props) {
                           funFact={
                             "I'm currently working this one! It's going to be MERN stack project."
                           }
-                          technologies={[""]}
+                          technologies={"ReactJS, React Hooks, Bootstrap"}
                           hyperLink={"https://trakster.herokuapp.com/"}
                           videoID={""}
                         />
@@ -389,9 +389,9 @@ export default function Home(props) {
                           funFact={
                             "Fun little Twitter bot that will eventually manage my Twitter all day on my old PC."
                           }
-                          technologies={[""]}
+                          technologies={"Python, Tweepy, TwitterAPI"}
                           hyperLink={"https://github.com/ChabaJosa/TwitterBot"}
-                          videoID=""
+                          videoID="VGm41RH9ZGM"
                         />
                       </div>
                     ) : null}
@@ -406,6 +406,12 @@ export default function Home(props) {
                   <p>
                     So you can doubt any liked and retweeted content on your
                     feed!
+                  </p>
+                  <p>
+                    <span className="hover-underline-animation">
+                      Video Duration:
+                    </span>{" >"}
+                     1 min
                   </p>
                 </article>
                 {/* Twitter Bot above */}
