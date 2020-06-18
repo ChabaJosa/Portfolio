@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React  from "react";
 import mainPic from "./template-elements/images/ProfilePic.png";
 import projectPic1 from "./template-elements/images/thumbs/01.png";
 import projectPic2 from "./template-elements/images/thumbs/02.png";

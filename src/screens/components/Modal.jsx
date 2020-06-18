@@ -31,17 +31,27 @@ export default function ProjectModal(props) {
           <p style={{padding: "0", marginBottom: "0.5vh" }}><span className="hover-underline-animation " >Fun Fact:</span>{" " + props.funFact}</p>
           <p style={{padding: "0", marginBottom: "1vh" }}><span className="hover-underline-animation " >Technologies:</span>{" " + props.technologies}</p>
           <br />
-          <Player videoID={props.videoID} title={props.title} />
+          {
+            props.videoID === "" ?
+            <div style={{display: "flex", flexDirection: "column", alignContent: "center", justifyContent: "center"}}>
+              <h1>Sorry, there's something wrong with this video ID :\</h1>
+              <p>Please try again later!</p>
+            </div>
+            :
+            <Player videoID={props.videoID} title={props.title} />
+          }
           {/* <p>Check it out!</p> */}
           <ul className="actions modalBtn" style={{margin: "1vh"}} >
             <li>
               <a
-                target="_blank"
-                href={`${props.hyperLink}`}
+                // target="_blank"
+                href={props.hyperLink}
                 className="hover-underline-animation " 
-                rel="noopener noreferrer"
+                // rel="noopener noreferrer"
+                onClick={(e) => {window.open(props.hyperLink)}}
               >
-                {`Click here for ${
+                {console.log("Here's the hyperlink" , props.hyperLink)}
+                {`${
                   props.hyperLink.includes("https://github.com/ChabaJosa/")
                     ? "Github Repo"
                     : "Deployed App"
