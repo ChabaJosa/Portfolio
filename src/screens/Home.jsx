@@ -1,4 +1,4 @@
-import React  from "react";
+import React from "react";
 import mainPic from "./template-elements/images/ProfilePic.png";
 import projectPic1 from "./template-elements/images/thumbs/01.png";
 import projectPic2 from "./template-elements/images/thumbs/02.png";
@@ -165,7 +165,9 @@ export default function Home(props) {
                         }
                         title={"EngagementML"}
                         funFact={"AI is my dream field."}
-                        technologies={"HTML5, CSS3, JavaScript, ReactJS, Node.js, Express.js, Jquery, Web Scraping, Python, Machine Learning"}
+                        technologies={
+                          "HTML5, CSS3, JavaScript, ReactJS, Node.js, Express.js, Jquery, Web Scraping, Python, Machine Learning"
+                        }
                         hyperLink={"https://engagementml.herokuapp.com/"}
                         videoID={"cdzeYRqonuw"}
                       />
@@ -214,9 +216,11 @@ export default function Home(props) {
                         }
                         title={"Super Marvel Directory"}
                         funFact={
-                          "My favorite superhero App of the two! Very much looking forward to a React Native version"
+                          "My favorite superhero App of the two! I'm looking forward to making a React Native version."
                         }
-                        technologies={"HTML5, CSS3, JavaScript, ReactJS and Marvel, Superhero  & YouTube API"}
+                        technologies={
+                          "HTML5, CSS3, JavaScript, ReactJS and Marvel, Superhero  & YouTube API"
+                        }
                         hyperLink={"https://super-directory.netlify.app/"}
                         videoID={"Vq5letSRWPM"}
                       />
@@ -347,7 +351,7 @@ export default function Home(props) {
                           }
                           title={"Trakster"}
                           funFact={
-                            "I'm currently working this one! It's going to be MERN stack project."
+                            "I'm currently working on this one! It's going to be MERN stack project. Right now most of the App functionality comes from an awesome tutorial from the talented Brad Traversy!"
                           }
                           technologies={"ReactJS, React Hooks, Bootstrap"}
                           hyperLink={"https://trakster.herokuapp.com/"}
@@ -387,7 +391,7 @@ export default function Home(props) {
                           }
                           title={"Twitter Bot"}
                           funFact={
-                            "Fun little Twitter bot that will eventually manage my Twitter all day on my old PC."
+                            "Quick Twitter bot that will eventually manage my Twitter all day on my old PC."
                           }
                           technologies={"Python, Tweepy, TwitterAPI"}
                           hyperLink={"https://github.com/ChabaJosa/TwitterBot"}
@@ -410,8 +414,8 @@ export default function Home(props) {
                   <p>
                     <span className="hover-underline-animation">
                       Video Duration:
-                    </span>{" >"}
-                     1 min
+                    </span>
+                    {" >"}1 min
                   </p>
                 </article>
                 {/* Twitter Bot above */}
@@ -436,8 +440,10 @@ export default function Home(props) {
                             console.log("Pressed onHide6"))
                           }
                           title={"Whak-A-Villain"}
-                          funFact={"This was my first project at Ironhack!"}
-                          technologies={"JavaScript, HTML5, CSS3, DOM Manipulation"}
+                          funFact={"This was my first project at Ironhack and my first Marvel Project!"}
+                          technologies={
+                            "JavaScript, HTML5, CSS3, DOM Manipulation"
+                          }
                           hyperLink={
                             "https://chabajosa.github.io/Whak-a-villain/"
                           }
