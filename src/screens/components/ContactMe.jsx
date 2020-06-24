@@ -4,11 +4,13 @@ import emailjs from 'emailjs-com';
 export default function ContactMe() {
 
     const [email, setEmail] = useState("");
+    const [name, setName] = useState("");
     const [message, setMessage] = useState("");
 
     const templateParams = {
-        name: message,
-        notes: email
+        name,
+        email,
+        message
     };
 
     const onChangeParam = (e) => {
@@ -17,10 +19,13 @@ export default function ContactMe() {
         console.log(name, value)
 
         if (value!==""){
-            name === "email" ?
-            setEmail(value)
-            :
-            setMessage(value) && console.log(templateParams)
+            if(name === "user_email") {
+              setEmail(value)
+            } else if (name === "message") {
+              setMessage(value)
+            } else {
+              setName(value)
+            }
         } else {
             return null
         }
@@ -38,17 +43,6 @@ export default function ContactMe() {
             });
     }
 
-    // form className="contact-form" onSubmit={sendEmail}>
-    //   <input type="hidden" name="contact_number" />
-    //   <label>Name</label>
-    //   <input type="text" name="user_name" />
-    //   <label>Email</label>
-    //   <input type="email" name="user_email" />
-    //   <label>Message</label>
-    //   <textarea name="message" />
-    //   <input type="submit" value="Send" />
-    // </form>
-
     return (
         <div className="col-8 col-12-small">
                 <form method="post" action="#" >
@@ -59,6 +53,7 @@ export default function ContactMe() {
                         name="user_name"
                         id="name"
                         placeholder="Name"
+                        onChange={(e) => onChangeParam(e)}
                         />
                     </div>
                     <div className="col-12-xsmall">
