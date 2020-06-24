@@ -13,6 +13,7 @@ import { Collapse } from "react-collapse";
 import { Link } from "react-router-dom";
 import Modal from "./components/Modal";
 import Skills from "./components/Skills";
+import ContactMe from "./components/ContactMe"
 
 export default function Home(props) {
   const TEXT_COLLAPSE_OPTIONS = {
@@ -25,8 +26,8 @@ export default function Home(props) {
     textStyle: {
       float: "none",
       fontSize: "16px",
-      mozAppearance: "none",
-      webkitAppearance: "none",
+      MozAppearance: "none",
+      WebkitAppearance: "none",
       msAppearance: "none",
       appearance: "none",
       borderRadius: "0.35em",
@@ -255,8 +256,8 @@ export default function Home(props) {
                   style={{
                     float: "none",
                     fontSize: "16px",
-                    mozAppearance: "none",
-                    webkitAppearance: "none",
+                    MozAppearance: "none",
+                    WebkitAppearance: "none",
                     msAppearance: "none",
                     appearance: "none",
                     borderRadius: "0.35em",
@@ -477,8 +478,8 @@ export default function Home(props) {
                   //   style={{
                   //     float: "none",
                   //     fontSize: "16px",
-                  //     mozAppearance: "none",
-                  //     webkitAppearance: "none",
+                  //     MozAppearance: "none",
+                  //     WebkitAppearance: "none",
                   //     msAppearance: "none",
                   //     appearance: "none",
                   //     borderRadius: "0.35em",
@@ -557,42 +558,8 @@ export default function Home(props) {
             <h2>Get In Touch</h2>
 
             <div className="row">
-              <div className="col-8 col-12-small">
-                <form method="post" action="#">
-                  <div className="row gtr-uniform gtr-50">
-                    <div className="col-12-xsmall">
-                      <input
-                        type="text"
-                        name="name"
-                        id="name"
-                        placeholder="Name"
-                      />
-                    </div>
-                    <div className="col-12-xsmall">
-                      <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        placeholder="Email"
-                      />
-                    </div>
-                    <div className="col-12">
-                      <textarea
-                        name="message"
-                        id="message"
-                        placeholder="Message"
-                        rows={4}
-                        defaultValue={""}
-                      />
-                    </div>
-                  </div>
-                </form>
-                <ul className="actions">
-                  <li>
-                    <input type="submit" defaultValue="Send Message" />
-                  </li>
-                </ul>
-              </div>
+              <ContactMe />
+
               <div className="col-4 col-12-small">
                 <ul className="labeled-icons">
                   <li>
@@ -621,6 +588,7 @@ export default function Home(props) {
                   </li>
                 </ul>
               </div>
+
             </div>
           </section>
         </div>
