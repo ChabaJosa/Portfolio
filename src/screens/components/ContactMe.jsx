@@ -16,7 +16,6 @@ export default function ContactMe() {
     const onChangeParam = (e) => {
         let name = e.target.name
         let value = e.target.value
-        console.log(name, value)
 
         if (value!==""){
             if(name === "user_email") {
@@ -34,7 +33,6 @@ export default function ContactMe() {
 
     const sendEmail = (e) => {
         e.preventDefault()
-        console.log("Here's templatePArams", templateParams)
         emailjs.send('default_service','Porfoltio', templateParams, 'user_2itNWIum3wEhRCrEl1zDC')
             .then((response) => {
                console.log('SUCCESS!', response.status, response.text);

@@ -7,7 +7,7 @@ import projectPic4 from "./template-elements/images/thumbs/04.png";
 import projectPic5 from "./template-elements/images/thumbs/05.png";
 import projectPic6 from "./template-elements/images/thumbs/06.png";
 import Background from "./template-elements/images/codeBackground.jpg";
-
+import Resume from "../Chaba-Josa-CV.pdf"
 import ReactTextCollapse from "react-text-collapse";
 import { Collapse } from "react-collapse";
 import { Link } from "react-router-dom";
@@ -510,13 +510,18 @@ export default function Home(props) {
             {/* Download resume btn */}
             <ul className="actions">
               <li>
-                <a
+                {/* <a
                   target="_blank"
                   href="https://github.com/ChabaJosa?tab=repositories"
                   className="hover-underline-animation"
                   rel="noopener noreferrer"
                 >
                   Click here for all my repos!
+                </a> */}
+                <a
+                  href={Resume} 
+                  download={Resume}
+                  >Download Resume
                 </a>
               </li>
             </ul>
