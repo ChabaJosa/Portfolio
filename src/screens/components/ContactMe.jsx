@@ -36,13 +36,14 @@ export default function ContactMe() {
         emailjs.send('default_service','Porfoltio', templateParams, 'user_2itNWIum3wEhRCrEl1zDC')
             .then((response) => {
                console.log('SUCCESS!', response.status, response.text);
+               alert("Email sent succesfully!");
             }, (err) => {
                console.log('FAILED...', err);
             });
     }
 
     return (
-        <div className="col-8 col-12-small">
+        <div className="col-10 col-12-small">
                 <form method="post" action="#" >
                   <div className="row gtr-uniform gtr-50">
                     <div className="col-12-xsmall">

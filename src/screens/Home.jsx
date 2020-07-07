@@ -585,10 +585,7 @@ export default function Home(props) {
                       <span className="label">Email</span>
                     </h3>
                     <p>
-                      {`chabagjg
-                    @\n
-                    gmail
-                    .com`}
+                      chabagjg@gmail.com
                     </p>
                   </li>
                 </ul>
