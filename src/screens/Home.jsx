@@ -7,13 +7,14 @@ import projectPic4 from "./template-elements/images/thumbs/04.png";
 import projectPic5 from "./template-elements/images/thumbs/05.png";
 import projectPic6 from "./template-elements/images/thumbs/06.png";
 import Background from "./template-elements/images/codeBackground.jpg";
-import Resume from "../Chaba-Josa-CV.pdf"
+import Resume from "../Chaba-Josa-CV.pdf";
 import ReactTextCollapse from "react-text-collapse";
 import { Collapse } from "react-collapse";
 import { Link } from "react-router-dom";
 import Modal from "./components/Modal";
 import Skills from "./components/Skills";
-import ContactMe from "./components/ContactMe"
+import ContactMe from "./components/ContactMe";
+import ProjectCard from "./components/ProjectCard";
 
 export default function Home(props) {
   const TEXT_COLLAPSE_OPTIONS = {
@@ -139,116 +140,90 @@ export default function Home(props) {
           <section id="two">
             <h2>Highlight Projects</h2>
             <div className="row">
-              <article className="col-12-xsmall work-item">
-                {/* Insert Link here */}
-                <Link
-                  to="/"
-                  style={
-                    {
-                      // display: "inline"
-                    }
-                  }
-                  className="image fit thumb"
-                  onClick={() => setModalShow1(true)}
-                >
-                  <img
-                    src={projectPic1}
-                    alt=""
-                    // style={{ width:"20vw", overflow: "hidden" }}
-                  />
-                  {modalShow1 === true ? (
-                    <div>
-                      <Modal
-                        show={modalShow1}
-                        onHide={
-                          (() => setModalShow1(false),
-                          console.log("Pressed onHide 1"))
-                        }
-                        title={"EngagementML"}
-                        funFact={"AI is my dream field."}
-                        technologies={
-                          "HTML5, CSS3, JavaScript, ReactJS, Node.js, Express.js, Jquery, Web Scraping, Python, Machine Learning"
-                        }
-                        hyperLink={"https://engagementml.herokuapp.com/"}
-                        videoID={"cdzeYRqonuw"}
-                      />
-                    </div>
-                  ) : null}
-                </Link>
-                <Link
-                  to="/"
-                  // className="image fit thumb"
-                  onClick={() => setModalShow5(true)}
-                >
-                  <h3 className="hover-underline-animation">EngagementML</h3>
-                </Link>
-                <p>Instagram Insights + Machine Learning recommendations.</p>
-                <p>
-                  <span className="hover-underline-animation">
-                    Video Duration:
-                  </span>{" "}
-                  +7 min
-                </p>
-              </article>
-              <article className="col-12-xsmall work-item">
-                {/* Eml above*/}
-                <Link
-                  to="/"
-                  style={
-                    {
-                      // display: "inline"
-                    }
-                  }
-                  className="image fit thumb"
-                  onClick={() => setModalShow2(true)}
-                >
-                  <img
-                    src={projectPic2}
-                    alt=""
-                    // style={{ width:"20vw", overflow: "hidden" }}
-                  />
-                  {modalShow2 === true ? (
-                    <div>
-                      <Modal
-                        show={modalShow2}
-                        onHide={
-                          (() => setModalShow2(false),
-                          console.log("Pressed onHide2"))
-                        }
-                        title={"Super Marvel Directory"}
-                        funFact={
-                          "My favorite superhero App of the two! I'm looking forward to making a React Native version."
-                        }
-                        technologies={
-                          "HTML5, CSS3, JavaScript, ReactJS and Marvel, Superhero  & YouTube API"
-                        }
-                        hyperLink={"https://super-directory.netlify.app/"}
-                        videoID={"Vq5letSRWPM"}
-                      />
-                    </div>
-                  ) : null}
-                </Link>
-                <Link
-                  to="/"
-                  // className="image fit thumb"
-                  onClick={() => setModalShow5(true)}
-                >
-                  <h3 className="hover-underline-animation">
-                    Super Marvel Directory
-                  </h3>
-                </Link>
-                <p>
-                  Power-Stats, fun facts, videos and comics your favorite
-                  heroes!{" "}
-                </p>
-                <p>
-                  <span className="hover-underline-animation">
-                    Video Duration:
-                  </span>{" "}
-                  +2 min
-                </p>
-              </article>
-              {/* Super Directory App above */}
+              {/* #1 */}
+              <ProjectCard
+                pic={projectPic1}
+                title={"EngagementML"}
+                subtitle={
+                  "Instagram Insights + Machine Learning recommendations."
+                }
+                videoDuration={"+7 min"}
+                funFact={"AI is my dream field."}
+                technologies={
+                  "HTML5, CSS3, JavaScript, ReactJS, Node.js, Express.js, Jquery, Web Scraping, Python, Machine Learning"
+                }
+                hyperLink={"https://engagementml.herokuapp.com/"}
+                videoID={"cdzeYRqonuw"}
+              />
+              {/* #2 */}
+              <ProjectCard
+                title={"Super Marvel Directory"}
+                subtitle={
+                  "Power-Stats, fun facts, videos and comics your favorite heroes!"
+                }
+                videoDuration={"+2 min"}
+                funFact={
+                  "My favorite superhero App of the two! I'm looking forward to making a React Native version."
+                }
+                technologies={
+                  "HTML5, CSS3, JavaScript, ReactJS and Marvel, Superhero  & YouTube API"
+                }
+                hyperLink={"https://super-directory.netlify.app/"}
+                videoID={"Vq5letSRWPM"}
+                pic={projectPic2}
+              />
+              {/* #3 */}
+              <ProjectCard
+                title={"React-Native Food App"}
+                subtitle={"First React-Native App (of many to come)"}
+                videoDuration={">1 min"}
+                funFact={"My first Mobile App!"}
+                technologies={"React-Native, React Hooks, contextAPI"}
+                hyperLink={"https://github.com/ChabaJosa/FoodAppRN"}
+                videoID={"4Jo3q3iE_EE"}
+                pic={projectPic3}
+              />
+              {/* #4 */}
+              <ProjectCard
+                title={"Trakster"}
+                subtitle={"Prototype expense tracker (working progress)."}
+                videoDuration={"+2 min"}
+                funFact={
+                  "I'm currently working on this one! It's going to be MERN stack project. Right now most of the App functionality comes from an awesome tutorial from the talented Brad Traversy!"
+                }
+                technologies={"ReactJS, React Hooks, Bootstrap"}
+                hyperLink={"https://trakster.herokuapp.com/"}
+                videoID={"-DYcwRQQKTk"}
+              />
+              {/* #5 */}
+              <ProjectCard
+                title={"TwitterBot"}
+                subtitle={
+                  "So you can doubt any liked and retweeted content on your feed!"
+                }
+                funFact={
+                  "Quick Twitter bot that will eventually manage my Twitter all day on my old PC."
+                }
+                technologies={"Python, Tweepy, TwitterAPI"}
+                hyperLink={"https://github.com/ChabaJosa/TwitterBot"}
+                videoID="VGm41RH9ZGM"
+                pic={projectPic5}
+              />
+              {/* 6 */}
+              <ProjectCard
+                title={"Whak-A-Villain"}
+                subtitle={"Marvel themed D.O.M. Manipulation whack-a-mole."}
+                videoDuration={"+7 min"}
+                funFact={
+                  "This was my first project at Ironhack and my first Marvel Project!"
+                }
+                technologies={"JavaScript, HTML5, CSS3, DOM Manipulation"}
+                hyperLink={"https://chabajosa.github.io/Whak-a-villain/"}
+                videoID={"w3eXuTN9vq0"}
+                pic={projectPic6}
+              />
+
+              {/* CollapseCode */}
               {collapseProjects ? null : (
                 <div>
                   {/* <button
@@ -283,245 +258,16 @@ export default function Home(props) {
                 </button> */}
                 </div>
               )}
-              <Collapse isOpened={true}>
-                <article className="col-12-xsmall work-item">
-                  <Link
-                    to="/"
-                    className="image fit thumb"
-                    onClick={() => setModalShow3(true)}
-                  >
-                    <img
-                      src={projectPic3}
-                      alt=""
-                      // style={{ width:"20vw", overflow: "hidden" }}
-                    />
-                    {modalShow3 === true ? (
-                      <div>
-                        <Modal
-                          show={modalShow3}
-                          onHide={
-                            (() => setModalShow3(false),
-                            console.log("Pressed onHide"))
-                          }
-                          title={"React Native FoodApp"}
-                          funFact={"My first Mobile App!"}
-                          technologies={"React-Native, React Hooks, contextAPI"}
-                          hyperLink={"https://github.com/ChabaJosa/FoodAppRN"}
-                          videoID={"4Jo3q3iE_EE"}
-                        />
-                      </div>
-                    ) : null}
-                  </Link>
-                  <Link
-                    to="/"
-                    // className="image fit thumb"
-                    onClick={() => setModalShow5(true)}
-                  >
-                    <h3 className="hover-underline-animation">
-                      React-Native Food App
-                    </h3>
-                  </Link>
-                  <p>First React-Native App (of many to come).</p>
-                  <p>
-                    <span className="hover-underline-animation">
-                      Video Duration:
-                    </span>
-                    {" >"} 1 min
-                  </p>
-                </article>
-                {/* Food App above */}
-                <article className="col-12-xsmall work-item">
-                  {/* Insert Link here */}
-                  <Link
-                    to="/"
-                    className="image fit thumb"
-                    onClick={() => setModalShow4(true)}
-                  >
-                    <img
-                      src={projectPic4}
-                      alt=""
-                      // style={{ width:"20vw", overflow: "hidden" }}
-                    />
-                    {modalShow4 === true ? (
-                      <div>
-                        <Modal
-                          show={modalShow4}
-                          onHide={
-                            (() => setModalShow4(false),
-                            console.log("Pressed onHide4"))
-                          }
-                          title={"Trakster"}
-                          funFact={
-                            "I'm currently working on this one! It's going to be MERN stack project. Right now most of the App functionality comes from an awesome tutorial from the talented Brad Traversy!"
-                          }
-                          technologies={"ReactJS, React Hooks, Bootstrap"}
-                          hyperLink={"https://trakster.herokuapp.com/"}
-                          videoID={"-DYcwRQQKTk"}
-                        />
-                      </div>
-                    ) : null}
-                  </Link>
-                  <Link
-                    to="/"
-                    // className="image fit thumb"
-                    onClick={() => setModalShow5(true)}
-                  >
-                    <h3 className="hover-underline-animation">Trakster</h3>
-                  </Link>
-                  <p>Prototype expense tracker (working progress).</p>
-                </article>
-                {/* Trakster above */}
-                <article className="col-12-xsmall work-item">
-                  <Link
-                    to="/"
-                    className="image fit thumb"
-                    onClick={() => setModalShow5(true)}
-                  >
-                    <img
-                      src={projectPic5}
-                      alt=""
-                      // style={{ width:"20vw", overflow: "hidden" }}
-                    />
-                    {modalShow5 === true ? (
-                      <div>
-                        <Modal
-                          show={modalShow5}
-                          onHide={
-                            (() => setModalShow5(false),
-                            console.log("Pressed onHide5"))
-                          }
-                          title={"Twitter Bot"}
-                          funFact={
-                            "Quick Twitter bot that will eventually manage my Twitter all day on my old PC."
-                          }
-                          technologies={"Python, Tweepy, TwitterAPI"}
-                          hyperLink={"https://github.com/ChabaJosa/TwitterBot"}
-                          videoID="VGm41RH9ZGM"
-                        />
-                      </div>
-                    ) : null}
-                  </Link>
-                  <Link
-                    to="/"
-                    // className="image fit thumb"
-                    onClick={() => setModalShow5(true)}
-                  >
-                    <h3 className="hover-underline-animation">Twitter Bot</h3>
-                  </Link>
-                  <p>
-                    So you can doubt any liked and retweeted content on your
-                    feed!
-                  </p>
-                  <p>
-                    <span className="hover-underline-animation">
-                      Video Duration:
-                    </span>
-                    {" >"}1 min
-                  </p>
-                </article>
-                {/* Twitter Bot above */}
-                <article className="col-12-xsmall work-item">
-                  {/* Insert Link here */}
-                  <Link
-                    to="/"
-                    className="image fit thumb"
-                    onClick={() => setModalShow6(true)}
-                  >
-                    <img
-                      src={projectPic6}
-                      alt=""
-                      // style={{ width:"20vw", overflow: "hidden" }}
-                    />
-                    {modalShow6 === true ? (
-                      <div>
-                        <Modal
-                          show={modalShow6}
-                          onHide={
-                            (() => setModalShow6(false),
-                            console.log("Pressed onHide6"))
-                          }
-                          title={"Whak-A-Villain"}
-                          funFact={"This was my first project at Ironhack and my first Marvel Project!"}
-                          technologies={
-                            "JavaScript, HTML5, CSS3, DOM Manipulation"
-                          }
-                          hyperLink={
-                            "https://chabajosa.github.io/Whak-a-villain/"
-                          }
-                          videoID={"w3eXuTN9vq0"}
-                        />
-                      </div>
-                    ) : null}
-                  </Link>
-                  <Link
-                    to="/"
-                    // className="image fit thumb"
-                    onClick={() => setModalShow5(true)}
-                  >
-                    <h3 className="hover-underline-animation">
-                      Whak-A-Villain
-                    </h3>
-                  </Link>
-                  <p>Marvel themed D.O.M. Manipulation whack-a-mole.</p>
-                  <p>
-                    <span className="hover-underline-animation">
-                      Video Duration:
-                    </span>{" "}
-                    2 min
-                  </p>
-                </article>
-                {/* Whak a Villain above */}
-                {
-                  collapseProjects ? null : null
-                  // <button
-                  //   className="btn"
-                  //   style={{
-                  //     float: "none",
-                  //     fontSize: "16px",
-                  //     MozAppearance: "none",
-                  //     WebkitAppearance: "none",
-                  //     msAppearance: "none",
-                  //     appearance: "none",
-                  //     borderRadius: "0.35em",
-                  //     border: "solid 3px #efefef",
-                  //     color: "#787878 !important",
-                  //     display: "inline-block",
-                  //     fontWeight: "400",
-                  //     // height: "3.15em",
-                  //     lineHeight: "2.75em",
-                  //     minWidth: "7rem",
-                  //     textAlign: "center",
-                  //     textDecoration: "none",
-                  //     whiteSpace: "nowrap",
-                  //     margin: "1rem 0",
-                  //     color: "#a2a2a2",
-                  //     alignSelf: "center",
-                  //   }}
-                  //   onClick={() => {
-                  //     setCollapseProjects(false);
-                  //   }}
-                  // >
-                  //   show less
-                  // </button>
-                }
-              </Collapse>
+              {/* <Collapse isOpened={true}>
+                
+              </Collapse> */}
             </div>
 
             {/* Download resume btn */}
             <ul className="actions">
               <li>
-                {/* <a
-                  target="_blank"
-                  href="https://github.com/ChabaJosa?tab=repositories"
-                  className="hover-underline-animation"
-                  rel="noopener noreferrer"
-                >
-                  Click here for all my repos!
-                </a> */}
-                <a
-                  href={Resume} 
-                  download={Resume}
-                  >Download Resume
+                <a href={Resume} download={Resume}>
+                  Download Resume
                 </a>
               </li>
             </ul>
@@ -532,7 +278,6 @@ export default function Home(props) {
               <header className="major">
                 <h2>Skills </h2>
               </header>
-              {/* <h4>Standout Soft Skills</h4> */}
             </div>
 
             {/* Skills */}
@@ -584,13 +329,10 @@ export default function Home(props) {
                     <h3 className="icon solid fa-envelope">
                       <span className="label">Email</span>
                     </h3>
-                    <p>
-                      chabagjg@gmail.com
-                    </p>
+                    <p>chabagjg@gmail.com</p>
                   </li>
                 </ul>
               </div>
-
             </div>
           </section>
         </div>
