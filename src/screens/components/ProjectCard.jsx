@@ -3,7 +3,7 @@ import Modal from "./Modal";
 import { Link } from "react-router-dom";
 
 
-export default function ProjectCard({ pic, title, funFact, technologies, hyperLink, videoID, subtitle, videoDuration}) {
+export default function ProjectCard({ pic, title, funFact, technologies, hyperLink, videoID, subtitle, videoDuration, purpose}) {
 
     const [modalShow, setModalShow] = React.useState(false);
 
@@ -32,6 +32,7 @@ export default function ProjectCard({ pic, title, funFact, technologies, hyperLi
                         technologies={technologies}
                         hyperLink={hyperLink}
                         videoID={videoID}
+                        purpose={purpose}
                       />
                     </div>
                   ) : null}
@@ -41,7 +42,7 @@ export default function ProjectCard({ pic, title, funFact, technologies, hyperLi
                   // className="image fit thumb"
                   onClick={() => setModalShow(true)}
                 >
-                  <h3 className="hover-underline-animation">$$${title}</h3>
+                  <h3 className="hover-underline-animation">{title}</h3>
                 </Link>
                     <p>{subtitle}</p>
                 <p>

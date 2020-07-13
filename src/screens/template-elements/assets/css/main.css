@@ -3263,6 +3263,10 @@ input, select, textarea {
 
 
 
-.image.fit img {
-    max-width: 40rem;
-}
+	.image.fit img {
+	max-width: 40rem;
+	}
+
+	.modalTitle{
+		font-weight: bold!important;
+	}

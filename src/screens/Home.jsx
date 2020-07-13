@@ -143,6 +143,7 @@ export default function Home(props) {
               {/* #1 */}
               <ProjectCard
                 pic={projectPic1}
+                purpose={"Ideally, this app would give users insights on how to do better, more efficient content strategies for instagram."}
                 title={"EngagementML"}
                 subtitle={
                   "Instagram Insights + Machine Learning recommendations."
@@ -171,6 +172,7 @@ export default function Home(props) {
                 hyperLink={"https://super-directory.netlify.app/"}
                 videoID={"Vq5letSRWPM"}
                 pic={projectPic2}
+                purpose={"This app allows you to learn more about your favorite heroes!"}
               />
               {/* #3 */}
               <ProjectCard
@@ -182,6 +184,7 @@ export default function Home(props) {
                 hyperLink={"https://github.com/ChabaJosa/FoodAppRN"}
                 videoID={"4Jo3q3iE_EE"}
                 pic={projectPic3}
+                purpose={"If you ever get hungry and want to see which restaurants are open anywhere in the U.S. you should have this app which uses the Yelp API to search for restaurants, or maybe Yelp."}
               />
               {/* #4 */}
               <ProjectCard
@@ -195,6 +198,7 @@ export default function Home(props) {
                 hyperLink={"https://trakster.herokuapp.com/"}
                 videoID={"-DYcwRQQKTk"}
                 pic={projectPic4}
+                purpose={"Hopefully, when I'm done with this app it will help my keep track, separately, of my fixed and variable expenses."}
               />
               {/* #5 */}
               <ProjectCard
@@ -209,6 +213,7 @@ export default function Home(props) {
                 hyperLink={"https://github.com/ChabaJosa/TwitterBot"}
                 videoID="VGm41RH9ZGM"
                 pic={projectPic5}
+                purpose={"If you're lazy about liking tweets or retweeting, clone this repo, install 2 python libraries and you're set for life!"}
               />
               {/* 6 */}
               <ProjectCard
@@ -222,6 +227,7 @@ export default function Home(props) {
                 hyperLink={"https://chabajosa.github.io/Whak-a-villain/"}
                 videoID={"w3eXuTN9vq0"}
                 pic={projectPic6}
+                purpose={"If you ever wanted to see what a Marvel themed Whack-A-Mole game looks like, here it is!"}
               />
 
               {/* CollapseCode */}
