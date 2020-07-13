@@ -28,9 +28,9 @@ export default function ProjectModal(props) {
       <ModalBody>
         {/* Insert iframe here */}
         <div className="modalBodyDiv">
-          <p style={{padding: "0", marginBottom: "0.5vh" }}><span className="hover-underline-animation modalTitle " >Fun Fact:</span>{" " + props.funFact}</p>
-          <p style={{padding: "0", marginBottom: "1vh" }}><span className="hover-underline-animation modalTitle " >Technologies:</span>{" " + props.technologies}</p>
-          <p style={{padding: "0", marginBottom: "1vh" }}><span className="hover-underline-animation modalTitle " >Purpose:</span>{" " + props.purpose}</p>
+          <p style={{padding: "0", marginBottom: "0.5vh" }}><span className="hover-underline-animation modalTitle " >Fun Fact:</span><span>{" " + props.funFact}</span></p>
+          <p style={{padding: "0", marginBottom: "1vh" }}><span className="hover-underline-animation modalTitle " >Technologies:</span><span>{" " + props.technologies}</span></p>
+          <p style={{padding: "0", marginBottom: "1vh" }}><span className="hover-underline-animation modalTitle " >Purpose:</span><span></span>{" " + props.purpose}</p>
           <br />
           {
             props.videoID === "" ?
