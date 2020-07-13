@@ -194,6 +194,7 @@ export default function Home(props) {
                 technologies={"ReactJS, React Hooks, Bootstrap"}
                 hyperLink={"https://trakster.herokuapp.com/"}
                 videoID={"-DYcwRQQKTk"}
+                pic={projectPic4}
               />
               {/* #5 */}
               <ProjectCard
@@ -224,6 +225,7 @@ export default function Home(props) {
               />
 
               {/* CollapseCode */}
+
               {collapseProjects ? null : (
                 <div>
                   {/* <button
@@ -279,6 +281,8 @@ export default function Home(props) {
                 <h2>Skills </h2>
               </header>
             </div>
+
+              {/* End of CollapseCode */}
 
             {/* Skills */}
             <div>

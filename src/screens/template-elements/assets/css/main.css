@@ -3260,3 +3260,9 @@ input, select, textarea {
 	.image.avatar img {
 		border: 3px solid white;
 	}
+
+
+
+.image.fit img {
+    max-width: 40rem;
+}
