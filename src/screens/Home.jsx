@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import ReactTextCollapse from "react-text-collapse";
 import mainPic from "./template-elements/images/ProfilePic.png";
 import projectPic0 from "./template-elements/images/thumbs/00.png";
 import projectPic1 from "./template-elements/images/thumbs/01.png";
@@ -9,12 +10,24 @@ import projectPic5 from "./template-elements/images/thumbs/05.png";
 import projectPic6 from "./template-elements/images/thumbs/06.png";
 import Background from "./template-elements/images/codeBackground.jpg";
 import Resume from "../ChabaJosa-07-21.1.pdf";
-import ReactTextCollapse from "react-text-collapse";
 import Skills from "./components/Skills";
 import ContactMe from "./components/ContactMe";
 import ProjectCard from "./components/ProjectCard";
-
+import Footer from "./components/Footer";
+//
 export default function Home(props) {
+  const [currWidth, setWidth] = useState(null)
+  //
+  useEffect(() => {
+    let isSubscribed = true;
+    if (isSubscribed == true) {
+      try {
+        setWidth(window.innerWidth)
+      } catch (err) { }
+    }
+    return () => (isSubscribed = false);
+  }, []);
+  //
   const TEXT_COLLAPSE_OPTIONS = {
     collapse: false, // default state when component rendered
     collapseText: "Full Story", // text to show when collapsed
@@ -44,9 +57,7 @@ export default function Home(props) {
       margin: "1rem 0",
     },
   };
-  //
-  const [collapseProjects, setCollapseProjects] = React.useState(false);
-  //
+  // 
   return (
     <>
       <div>
@@ -61,7 +72,7 @@ export default function Home(props) {
                 ), 
               url(${Background})`,
             backgroundRepeat: "no-repeat",
-            backgroundSize: "100rem",
+            backgroundSize: "105rem",
           }}
         >
           {/* Work on this background image above later */}
@@ -78,7 +89,10 @@ export default function Home(props) {
               <h1>React-Native Nerd</h1>
               <h1>Tech trend enthusiast</h1>
             </div>
+            {/*   Desktop Only */}
+            {currWidth > 1200 ? (<Footer />) : null}
           </div>
+
         </header>
         {/* Main */}
         <div id="main">
@@ -170,6 +184,32 @@ export default function Home(props) {
                 videoID={"pX4-TYdKjUk"}
               />
               {/* #1 */}
+              {/* #3 */}
+              <ProjectCard
+                title={"React-Native Food App"}
+                subtitle={"First React-Native App (of many to come)"}
+                videoDuration={">1 min"}
+                funFact={"My first Mobile App!"}
+                technologies={"React-Native, React Hooks, contextAPI"}
+                hyperLink={"https://github.com/ChabaJosa/FoodAppRN"}
+                videoID={"4Jo3q3iE_EE"}
+                pic={projectPic3}
+                purpose={"If you ever get hungry and want to see which restaurants are open anywhere in the U.S. you should have this app which uses the Yelp API to search for restaurants, or maybe Yelp."}
+              />
+              {/* #4 */}
+              <ProjectCard
+                title={"Trakster"}
+                subtitle={"Prototype expense tracker (working progress)."}
+                videoDuration={"+2 min"}
+                funFact={
+                  "I'm currently working on this one! It's going to be MERN stack project. Right now most of the App functionality comes from an awesome tutorial from the talented Brad Traversy!"
+                }
+                technologies={"ReactJS, React Hooks, Bootstrap"}
+                hyperLink={"https://trakster.herokuapp.com/"}
+                videoID={"-DYcwRQQKTk"}
+                pic={projectPic4}
+                purpose={"Hopefully, when I'm done with this app it will help my keep track, separately, of my fixed and variable expenses."}
+              />
               <ProjectCard
                 pic={projectPic1}
                 purpose={"Ideally, this app would give users insights on how to do better, more efficient content strategies for instagram."}
@@ -203,32 +243,6 @@ export default function Home(props) {
                 pic={projectPic2}
                 purpose={"This app allows you to learn more about your favorite heroes!"}
               />
-              {/* #3 */}
-              <ProjectCard
-                title={"React-Native Food App"}
-                subtitle={"First React-Native App (of many to come)"}
-                videoDuration={">1 min"}
-                funFact={"My first Mobile App!"}
-                technologies={"React-Native, React Hooks, contextAPI"}
-                hyperLink={"https://github.com/ChabaJosa/FoodAppRN"}
-                videoID={"4Jo3q3iE_EE"}
-                pic={projectPic3}
-                purpose={"If you ever get hungry and want to see which restaurants are open anywhere in the U.S. you should have this app which uses the Yelp API to search for restaurants, or maybe Yelp."}
-              />
-              {/* #4 */}
-              <ProjectCard
-                title={"Trakster"}
-                subtitle={"Prototype expense tracker (working progress)."}
-                videoDuration={"+2 min"}
-                funFact={
-                  "I'm currently working on this one! It's going to be MERN stack project. Right now most of the App functionality comes from an awesome tutorial from the talented Brad Traversy!"
-                }
-                technologies={"ReactJS, React Hooks, Bootstrap"}
-                hyperLink={"https://trakster.herokuapp.com/"}
-                videoID={"-DYcwRQQKTk"}
-                pic={projectPic4}
-                purpose={"Hopefully, when I'm done with this app it will help my keep track, separately, of my fixed and variable expenses."}
-              />
               {/* #5 */}
               <ProjectCard
                 title={"TwitterBot"}
@@ -259,45 +273,6 @@ export default function Home(props) {
                 purpose={"If you ever wanted to see what a Marvel themed Whack-A-Mole game looks like, here it is!"}
               />
 
-              {/* CollapseCode */}
-
-              {collapseProjects ? null : (
-                <div>
-                  {/* <button
-                  className="btn"
-                  style={{
-                    float: "none",
-                    fontSize: "16px",
-                    MozAppearance: "none",
-                    WebkitAppearance: "none",
-                    msAppearance: "none",
-                    appearance: "none",
-                    borderRadius: "0.35em",
-                    border: "solid 3px #efefef",
-                    color: "#787878 !important",
-                    display: "inline-block",
-                    fontWeight: "400",
-                    // height: "3.15em",
-                    lineHeight: "2.75em",
-                    minWidth: "7rem",
-                    textAlign: "center",
-                    textDecoration: "none",
-                    whiteSpace: "nowrap",
-                    margin: "1rem 0",
-                    color: "#a2a2a2",
-                    alignSelf: "center",
-                  }}
-                  onClick={() => {
-                    setCollapseProjects(true);
-                  }}
-                >
-                  show more
-                </button> */}
-                </div>
-              )}
-              {/* <Collapse isOpened={true}>
-                
-              </Collapse> */}
             </div>
 
             {/* Download resume btn */}
@@ -355,7 +330,7 @@ export default function Home(props) {
                     <h3 className="icon solid fa-home">
                       <span className="label">Address</span>
                     </h3>
-                    Miami, FL
+                    Fort Lauderdale, FL
                     <br />
                   </li>
                   <li>
@@ -375,45 +350,8 @@ export default function Home(props) {
             </div>
           </section>
         </div>
-        {/* Footer */}
-        <footer id="footer">
-          <div className="inner">
-            <ul className="icons">
-              <li>
-                <a
-                  href="https://twitter.com/cg_josa"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="icon brands fa-twitter"
-                >
-                  {/* <button onClick={() => { props.history.push("google.com"); window.location.reload() }} className="btn btn-light" type="submit" style={{ background: "transparent", color: "white", border:0 }} >+</button> */}
-                  <span className="label">Twitter</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://github.com/ChabaJosa"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="icon brands fa-github"
-                >
-                  {/* <button onClick={() => { props.history.push("google.com"); window.location.reload() }} className="btn btn-light" type="submit" style={{ background: "transparent", color: "white", border:0 }} >+</button> */}
-                  <span className="label">Github</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="https://linkedin.com/in/chaba-josa/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="icon solid fa-envelope"
-                >
-                  <span className="label">LinkedIn</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </footer>
+        {/* Mobile Only */}
+        {currWidth < 1200 ? (<Footer />) : null}
       </div>
     </>
   );
