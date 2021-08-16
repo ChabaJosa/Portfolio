@@ -1,5 +1,6 @@
 import React from "react";
 import mainPic from "./template-elements/images/ProfilePic.png";
+import projectPic0 from "./template-elements/images/thumbs/00.png";
 import projectPic1 from "./template-elements/images/thumbs/01.png";
 import projectPic2 from "./template-elements/images/thumbs/02.png";
 import projectPic3 from "./template-elements/images/thumbs/03.png";
@@ -84,7 +85,7 @@ export default function Home(props) {
           {/* One */}
           <section id="one">
             <header className="major">
-              <h2>My Story</h2>
+              <h2><i>My Story in Software</i></h2>
             </header>
             <ReactTextCollapse options={TEXT_COLLAPSE_OPTIONS}>
               <p>
@@ -125,15 +126,15 @@ export default function Home(props) {
                 <a target="_blank" rel="noopener noreferrer" href='https://www.banyanair.com/'>Banyan</a>
                 <br />
                 <br />
-                I started as an ile RPG Developer and as such, developed end-of-month reports for accounting, 
-                web programs for technicians to look up available parts and inventory for aircrafts. After a few 
+                I started as an ile RPG Developer and as such, developed end-of-month reports for accounting,
+                web programs for technicians to look up available parts and inventory for aircrafts. After a few
                 months, I noticed there was a huge opportunity cost. While most employees are out in the tarmac, they
-                have no access to any program unless they are sitting at their desktop, so I convinced the 
-                Director of Application Development to let me create proof of concept for a mobile app using a REST API 
+                have no access to any program unless they are sitting at their desktop, so I convinced the
+                Director of Application Development to let me create proof of concept for a mobile app using a REST API
                 and a React-Native frontend. After a month, I had a prototype working and searching for parts!
                 This shifted our focus for the entire 2021 year towards building a multi-faceted mobile app for both
-                employees and customers of Banyan Air Services and we succeeded in doing so! This will be the first 
-                project listed below! 
+                employees and customers of Banyan Air Services and we succeeded in doing so! This will be the first
+                project listed below!
                 <br />
                 <br />
                 This experience has made me realize that I want to focus on mobile development in the next few years
@@ -148,11 +149,26 @@ export default function Home(props) {
               </p>
             </ReactTextCollapse>
           </section>
-
           {/* Two */}
           <section id="two">
             <h2>Highlight Projects</h2>
             <div className="row">
+              {/* #0 */}
+              <ProjectCard
+                pic={projectPic0}
+                purpose={"Mobile App for both employees and customers of Banyan Air Services (FBO)."}
+                title={"Banyan Air Services App"}
+                subtitle={
+                  "Flight Reservations, Aircraft Inquiry, Personal Profile and much more!"
+                }
+                videoDuration={">1 min"}
+                funFact={"This is likely the only React-Native App with ile RPG you'll ever see."}
+                technologies={
+                  "React-Native, Expo, ContextAPI, NodeJS, ile RPG, IBM i OS"
+                }
+                hyperLink={"https://apps.apple.com/us/app/banyan-air-services/id1576872343"}
+                videoID={"pX4-TYdKjUk"}
+              />
               {/* #1 */}
               <ProjectCard
                 pic={projectPic1}
