@@ -4,10 +4,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "./screens/template-elements/assets/css/main.css"
 import MetaTags from "react-meta-tags";
 
-
 function App() {
-
-
   return (
     <>
     <MetaTags>
