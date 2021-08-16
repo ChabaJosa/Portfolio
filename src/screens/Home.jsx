@@ -114,8 +114,8 @@ export default function Home(props) {
                 continued in the College of Southern Maryland where I completed
                 college in 3 semesters and a summer, while working remotely for
                 the first company I worked for, MT Group. I went on to study
-                marketing at Florida International University and started my
-                Social Media Marketing career at Radar.
+                marketing at Florida International University and started 
+                Digital Media career at Radar.
                 <br />
                 <br />
                 Once I realized my true passion was coding, I ceased attending
@@ -135,9 +135,9 @@ export default function Home(props) {
                 <br />
                 <br />
                 I applied my newly acquired skills at Radar for a while, but I was
-                still having to do social media and digital marketing related tasks.
+                still having to do social media and digital marketing related tasks. https://www.radarpix.com/
                 I was ready for a 100 percent software development job and I found
-                <a target="_blank" rel="noopener noreferrer" href='https://www.banyanair.com/'>Banyan</a>
+                <a target="_blank" rel="noopener noreferrer" href='https://www.banyanair.com/'> {" "}Banyan.</a>
                 <br />
                 <br />
                 I started as an ile RPG Developer and as such, developed end-of-month reports for accounting,
