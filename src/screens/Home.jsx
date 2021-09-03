@@ -16,14 +16,109 @@ import ProjectCard from "./components/ProjectCard";
 import Footer from "./components/Footer";
 //
 export default function Home(props) {
-  const [currWidth, setWidth] = useState(null)
+  const [currWidth, setWidth] = useState(null);
+
+  const projArr = [
+    {
+      title: "Banyan Air Services App",
+      subtitle:
+        "Flight Reservations, Aircraft Inquiry, Personal Profile and much more!",
+      videoDuration: ">1 min",
+      funfact:
+        "This is likely the only React-Native App with ile RPG you'll ever see.",
+      tech: "React-Native, Expo, ContextAPI, NodeJS, ile RPG, IBM i OS",
+      hyperLink:
+        "https://apps.apple.com/us/app/banyan-air-services/id1576872343",
+      videoID: "pX4-TYdKjUk",
+      pic: projectPic0,
+      purpose:
+        "Mobile App for both employees and customers of Banyan Air Services (FBO).",
+    },
+    {
+      title: "React-Native Food App",
+      subtitle: "First React-Native App (of many to come)",
+      videoDuration: ">1 min",
+      funfact: "My first Mobile App!",
+      tech: "React-Native, React Hooks, contextAPI",
+      hyperLink: "https://github.com/ChabaJosa/FoodAppRN",
+      videoID: "4Jo3q3iE_EE",
+      pic: projectPic3,
+      purpose:
+        "If you ever get hungry and want to see which restaurants are open anywhere in the U.S. you should have this app which uses the Yelp API to search for restaurants, or maybe Yelp.",
+    },
+    {
+      title: "Trakster",
+      subtitle: "Prototype expense tracker (working progress).",
+      videoDuration: "+2 min",
+      funfact:
+        "I'm currently working on this one! It's going to be MERN stack project. Right now most of the App functionality comes from an awesome tutorial from the talented Brad Traversy!",
+      tech: "ReactJS, React Hooks, Bootstrap",
+      hyperLink: "https://trakster.herokuapp.com/",
+      videoID: "-DYcwRQQKTk",
+      pic: projectPic4,
+      purpose:
+        "Hopefully, when I'm done with this app it will help my keep track, separately, of my fixed and variable expenses.",
+    },
+    {
+      title: "EngagementML",
+      subtitle: "Instagram Insights + Machine Learning recommendations.",
+      videoDuration: "+7 min",
+      funfact: "AI is my dream field.",
+      tech: "HTML5, CSS3, JavaScript, ReactJS, Node.js, Express.js, Jquery, Web Scraping, Python, Machine Learning",
+      hyperLink: "https://engagementml.herokuapp.com/",
+      videoID: "cdzeYRqonuw",
+      pic: projectPic1,
+      purpose:
+        "Ideally, this app would give users insights on how to do better, more efficient content strategies for instagram.",
+    },
+    {
+      title: "Super Marvel Directory",
+      subtitle:
+        "Power-Stats, fun facts, videos and comics your favorite heroes!",
+      videoDuration: "+2 min",
+      funfact:
+        "My favorite superhero App of the two! I'm looking forward to making a React Native version.",
+      tech: "HTML5, CSS3, JavaScript, ReactJS and Marvel, Superhero  & YouTube API",
+      hyperLink: "https://super-directory.netlify.app/",
+      videoID: "Vq5letSRWPM",
+      pic: projectPic2,
+      purpose: "This app allows you to learn more about your favorite heroes!",
+    },
+    {
+      title: "TwitterBot",
+      subtitle:
+        "So you can doubt any liked and retweeted content on your feed!",
+      videoDuration: ">1 min",
+      funfact:
+        "Quick Twitter bot that will eventually manage my Twitter all day on my old PC.",
+      tech: "Python, Tweepy, TwitterAPI",
+      hyperLink: "https://github.com/ChabaJosa/TwitterBot",
+      videoID: "VGm41RH9ZGM",
+      pic: projectPic5,
+      purpose:
+        "If you're lazy about liking tweets or retweeting, clone this repo, install 2 python libraries and you're set for life!",
+    },
+    {
+      title: "Whak-A-Villain",
+      subtitle: "Marvel themed D.O.M. Manipulation whack-a-mole.",
+      videoDuration: "+7 min",
+      funfact:
+        "This was my first project at Ironhack and my first Marvel Project!",
+      tech: "JavaScript, HTML5, CSS3, DOM Manipulation",
+      hyperLink: "https://chabajosa.github.io/Whak-a-villain/",
+      videoID: "w3eXuTN9vq0",
+      pic: projectPic6,
+      purpose:
+        "If you ever wanted to see what a Marvel themed Whack-A-Mole game looks like, here it is!",
+    },
+  ];
   //
   useEffect(() => {
     let isSubscribed = true;
     if (isSubscribed == true) {
       try {
-        setWidth(window.innerWidth)
-      } catch (err) { }
+        setWidth(window.innerWidth);
+      } catch (err) {}
     }
     return () => (isSubscribed = false);
   }, []);
@@ -57,7 +152,7 @@ export default function Home(props) {
       margin: "1rem 0",
     },
   };
-  // 
+  //
   return (
     <>
       <div>
@@ -90,23 +185,24 @@ export default function Home(props) {
               <h1>Tech trend enthusiast</h1>
             </div>
             {/*   Desktop Only */}
-            {currWidth > 1200 ? (<Footer />) : null}
+            {currWidth > 1200 ? <Footer /> : null}
           </div>
-
         </header>
         {/* Main */}
         <div id="main">
           {/* One */}
           <section id="one">
             <header className="major">
-              <h2><i>My Story in Software</i></h2>
+              <h2>
+                <i>My Story in Software</i>
+              </h2>
             </header>
             <ReactTextCollapse options={TEXT_COLLAPSE_OPTIONS}>
               <p>
                 Ironhack graduate from January 2020, full-stack web development
-                cohort with a +2 year background in software development and
-                a +3 year background digital media. My current aspirations are
-                to grow within the tech industry while continuing to learn about
+                cohort with a +2 year background in software development and a
+                +3 year background digital media. My current aspirations are to
+                grow within the tech industry while continuing to learn about
                 programming.
               </p>
               <p>
@@ -114,7 +210,7 @@ export default function Home(props) {
                 continued in the College of Southern Maryland where I completed
                 college in 3 semesters and a summer, while working remotely for
                 the first company I worked for, MT Group. I went on to study
-                marketing at Florida International University and started 
+                marketing at Florida International University and started
                 Digital Media career at Radar.
                 <br />
                 <br />
@@ -122,8 +218,8 @@ export default function Home(props) {
                 undergraduate classes with only a semester shy of graduating to
                 study computer programming on my own. While I put in a couple of
                 hours a day, I knew I wasn't doing enough to reach the
-                professional level of expertise I was looking for. That is when I
-                found the Ironhack coding school Full-Stack Web Development
+                professional level of expertise I was looking for. That is when
+                I found the Ironhack coding school Full-Stack Web Development
                 Bootcamp. With 500+ hours of hands-on programming, I knew
                 Ironhack would provide me the tools I was looking for.
                 <br />
@@ -133,33 +229,47 @@ export default function Home(props) {
                 machine learning and web scraping to help plan out social media
                 content strategies.
                 <br />
-                <br />
-                I applied my newly acquired skills at Radar for a while, but I was
-                still having to do social media and digital marketing related tasks. https://www.radarpix.com/
-                I was ready for a 100 percent software development job and I found
-                <a target="_blank" rel="noopener noreferrer" href='https://www.banyanair.com/'> {" "}Banyan.</a>
-                <br />
-                <br />
-                I started as an ile RPG Developer and as such, developed end-of-month reports for accounting,
-                web programs for technicians to look up available parts and inventory for aircrafts. After a few
-                months, I noticed there was a huge opportunity cost. While most employees are out in the tarmac, they
-                have no access to any program unless they are sitting at their desktop, so I convinced the
-                Director of Application Development to let me create proof of concept for a mobile app using a REST API
-                and a React-Native frontend. After a month, I had a prototype working and searching for parts!
-                This shifted our focus for the entire 2021 year towards building a multi-faceted mobile app for both
-                employees and customers of Banyan Air Services and we succeeded in doing so! This will be the first
-                project listed below!
+                <br />I applied my newly acquired skills at Radar for a while,
+                but I was still having to do social media and digital marketing
+                related tasks. https://www.radarpix.com/ I was ready for a 100
+                percent software development job and I found
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.banyanair.com/"
+                >
+                  {" "}
+                  Banyan.
+                </a>
                 <br />
                 <br />
-                This experience has made me realize that I want to focus on mobile development in the next few years
-                of my career at infosec. I am looking forward to learning other mobile technologies like Flutter, Swift,
-                and Kotlin.
+                I started as an ile RPG Developer and as such, developed
+                end-of-month reports for accounting, web programs for
+                technicians to look up available parts and inventory for
+                aircrafts. After a few months, I noticed there was a huge
+                opportunity cost. While most employees are out in the tarmac,
+                they have no access to any program unless they are sitting at
+                their desktop, so I convinced the Director of Application
+                Development to let me create proof of concept for a mobile app
+                using a REST API and a React-Native frontend. After a month, I
+                had a prototype working and searching for parts! This shifted
+                our focus for the entire 2021 year towards building a
+                multi-faceted mobile app for both employees and customers of
+                Banyan Air Services and we succeeded in doing so! This will be
+                the first project listed below!
+                <br />
+                <br />
+                This experience has made me realize that I want to focus on
+                mobile development in the next few years of my career at
+                infosec. I am looking forward to learning other mobile
+                technologies like Flutter, Swift, and Kotlin.
                 <br />
                 <br />
                 If you have made it this far, thank you for reading my story!
               </p>
               <p>
-                Specialties: JavaScript (ES6), HTML5, CSS3, ReactJS, NodeJS, React-Native, NoSQL, SQL, ile RPG, IBM iOS.
+                Specialties: JavaScript (ES6), HTML5, CSS3, ReactJS, NodeJS,
+                React-Native, NoSQL, SQL, ile RPG, IBM iOS.
               </p>
             </ReactTextCollapse>
           </section>
@@ -167,114 +277,22 @@ export default function Home(props) {
           <section id="two">
             <h2>Highlight Projects</h2>
             <div className="row">
-              {/* #0 */}
-              <ProjectCard
-                pic={projectPic0}
-                purpose={"Mobile App for both employees and customers of Banyan Air Services (FBO)."}
-                title={"Banyan Air Services App"}
-                subtitle={
-                  "Flight Reservations, Aircraft Inquiry, Personal Profile and much more!"
-                }
-                videoDuration={">1 min"}
-                funFact={"This is likely the only React-Native App with ile RPG you'll ever see."}
-                technologies={
-                  "React-Native, Expo, ContextAPI, NodeJS, ile RPG, IBM i OS"
-                }
-                hyperLink={"https://apps.apple.com/us/app/banyan-air-services/id1576872343"}
-                videoID={"pX4-TYdKjUk"}
-              />
-              {/* #1 */}
-              {/* #3 */}
-              <ProjectCard
-                title={"React-Native Food App"}
-                subtitle={"First React-Native App (of many to come)"}
-                videoDuration={">1 min"}
-                funFact={"My first Mobile App!"}
-                technologies={"React-Native, React Hooks, contextAPI"}
-                hyperLink={"https://github.com/ChabaJosa/FoodAppRN"}
-                videoID={"4Jo3q3iE_EE"}
-                pic={projectPic3}
-                purpose={"If you ever get hungry and want to see which restaurants are open anywhere in the U.S. you should have this app which uses the Yelp API to search for restaurants, or maybe Yelp."}
-              />
-              {/* #4 */}
-              <ProjectCard
-                title={"Trakster"}
-                subtitle={"Prototype expense tracker (working progress)."}
-                videoDuration={"+2 min"}
-                funFact={
-                  "I'm currently working on this one! It's going to be MERN stack project. Right now most of the App functionality comes from an awesome tutorial from the talented Brad Traversy!"
-                }
-                technologies={"ReactJS, React Hooks, Bootstrap"}
-                hyperLink={"https://trakster.herokuapp.com/"}
-                videoID={"-DYcwRQQKTk"}
-                pic={projectPic4}
-                purpose={"Hopefully, when I'm done with this app it will help my keep track, separately, of my fixed and variable expenses."}
-              />
-              <ProjectCard
-                pic={projectPic1}
-                purpose={"Ideally, this app would give users insights on how to do better, more efficient content strategies for instagram."}
-                title={"EngagementML"}
-                subtitle={
-                  "Instagram Insights + Machine Learning recommendations."
-                }
-                videoDuration={"+7 min"}
-                funFact={"AI is my dream field."}
-                technologies={
-                  "HTML5, CSS3, JavaScript, ReactJS, Node.js, Express.js, Jquery, Web Scraping, Python, Machine Learning"
-                }
-                hyperLink={"https://engagementml.herokuapp.com/"}
-                videoID={"cdzeYRqonuw"}
-              />
-              {/* #2 */}
-              <ProjectCard
-                title={"Super Marvel Directory"}
-                subtitle={
-                  "Power-Stats, fun facts, videos and comics your favorite heroes!"
-                }
-                videoDuration={"+2 min"}
-                funFact={
-                  "My favorite superhero App of the two! I'm looking forward to making a React Native version."
-                }
-                technologies={
-                  "HTML5, CSS3, JavaScript, ReactJS and Marvel, Superhero  & YouTube API"
-                }
-                hyperLink={"https://super-directory.netlify.app/"}
-                videoID={"Vq5letSRWPM"}
-                pic={projectPic2}
-                purpose={"This app allows you to learn more about your favorite heroes!"}
-              />
-              {/* #5 */}
-              <ProjectCard
-                title={"TwitterBot"}
-                subtitle={
-                  "So you can doubt any liked and retweeted content on your feed!"
-                }
-                funFact={
-                  "Quick Twitter bot that will eventually manage my Twitter all day on my old PC."
-                }
-                technologies={"Python, Tweepy, TwitterAPI"}
-                hyperLink={"https://github.com/ChabaJosa/TwitterBot"}
-                videoID="VGm41RH9ZGM"
-                pic={projectPic5}
-                purpose={"If you're lazy about liking tweets or retweeting, clone this repo, install 2 python libraries and you're set for life!"}
-              />
-              {/* 6 */}
-              <ProjectCard
-                title={"Whak-A-Villain"}
-                subtitle={"Marvel themed D.O.M. Manipulation whack-a-mole."}
-                videoDuration={"+7 min"}
-                funFact={
-                  "This was my first project at Ironhack and my first Marvel Project!"
-                }
-                technologies={"JavaScript, HTML5, CSS3, DOM Manipulation"}
-                hyperLink={"https://chabajosa.github.io/Whak-a-villain/"}
-                videoID={"w3eXuTN9vq0"}
-                pic={projectPic6}
-                purpose={"If you ever wanted to see what a Marvel themed Whack-A-Mole game looks like, here it is!"}
-              />
-
+              {projArr.map((item) => {
+                return (
+                  <ProjectCard
+                    title={item.title}
+                    subtitle={item.subtitle}
+                    videoDuration={item.videoDuration}
+                    funFact={item.funfact}
+                    technologies={item.tech}
+                    hyperLink={item.hyperLink}
+                    videoID={item.videoID}
+                    pic={item.pic}
+                    purpose={item.purpose}
+                  />
+                );
+              })}
             </div>
-
             {/* Download resume btn */}
             <ul className="actions">
               <li>
@@ -351,7 +369,7 @@ export default function Home(props) {
           </section>
         </div>
         {/* Mobile Only */}
-        {currWidth < 1200 ? (<Footer />) : null}
+        {currWidth < 1200 ? <Footer /> : null}
       </div>
     </>
   );
