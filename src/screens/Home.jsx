@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import ReactTextCollapse from "react-text-collapse";
-import mainPic from "./template-elements/images/ProfilePic.png";
+import mainPic     from "./template-elements/images/ProfilePic.png";
 import projectPic0 from "./template-elements/images/thumbs/00.png";
 import projectPic1 from "./template-elements/images/thumbs/01.png";
 import projectPic2 from "./template-elements/images/thumbs/02.png";
@@ -8,12 +8,13 @@ import projectPic3 from "./template-elements/images/thumbs/03.png";
 import projectPic4 from "./template-elements/images/thumbs/04.png";
 import projectPic5 from "./template-elements/images/thumbs/05.png";
 import projectPic6 from "./template-elements/images/thumbs/06.png";
-import Background from "./template-elements/images/codeBackground.jpg";
-import Resume from "../ChabaJosa-07-21.1.pdf";
-import Skills from "./components/Skills";
-import ContactMe from "./components/ContactMe";
+import flammaPic   from "./template-elements/images/fulls/flama.png"
+import Background  from "./template-elements/images/codeBackground.jpg";
+import Resume      from "../ChabaJosa-07-21.1.pdf";
+import Skills      from "./components/Skills";
+import ContactMe   from "./components/ContactMe";
 import ProjectCard from "./components/ProjectCard";
-import Footer from "./components/Footer";
+import Footer      from "./components/Footer";
 //
 export default function Home(props) {
   const [currWidth, setWidth] = useState(null);
@@ -45,6 +46,19 @@ export default function Home(props) {
       pic: projectPic3,
       purpose:
         "If you ever get hungry and want to see which restaurants are open anywhere in the U.S. you should have this app which uses the Yelp API to search for restaurants, or maybe Yelp.",
+    },
+    {
+      title: "Flamma",
+      subtitle: "E-Commerce with Context API, Paypal payment set-up and no backend.",
+      videoDuration: "+1 min",
+      funfact:
+        "This was initially intended for a friend's family business!",
+      tech: "ReactJS, React Hooks, Bootstrap, Context API",
+      hyperLink: "https://flammacandles.netlify.app/",
+      videoID: "xcGG0tpcuuo",
+      pic: flammaPic,
+      purpose:
+        "Show some candles for sale and have a home button thats a cool CSS flame!",
     },
     {
       title: "Trakster",
