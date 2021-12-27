@@ -10,7 +10,7 @@ import projectPic5 from "./template-elements/images/thumbs/05.png";
 import projectPic6 from "./template-elements/images/thumbs/06.png";
 import flammaPic   from "./template-elements/images/fulls/flama.png"
 import Background  from "./template-elements/images/codeBackground.jpg";
-import Resume      from "../ChabaJosa-07-21.1.pdf";
+import Resume      from "../ChabaJosa-12-27.pdf";
 import Skills      from "./components/Skills";
 import ContactMe   from "./components/ContactMe";
 import ProjectCard from "./components/ProjectCard";
